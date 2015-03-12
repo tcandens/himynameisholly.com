@@ -1,0 +1,63 @@
+/* Set font-family for Mount: "da-font.com/mount"; created with typesquirrel.com */
+@font-face {
+    font-family: 'mount_italic';
+    src: url('../fonts/MountItalic_PersonalUse-webfont.eot');
+    src: url('../fonts/MountItalic_PersonalUse-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MountItalic_PersonalUse-webfont.woff2') format('woff2'),
+         url('../fonts/MountItalic_PersonalUse-webfont.woff') format('woff'),
+         url('../fonts/MountItalic_PersonalUse-webfont.ttf') format('truetype'),
+         url('../fonts/MountItalic_PersonalUse-webfont.svg#mount_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'mount';
+    src: url('../fonts/MountRegular_PersonalUse-webfont.eot');
+    src: url('../fonts/MountRegular_PersonalUse-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MountRegular_PersonalUse-webfont.woff2') format('woff2'),
+         url('../fonts/MountRegular_PersonalUse-webfont.woff') format('woff'),
+         url('../fonts/MountRegular_PersonalUse-webfont.ttf') format('truetype'),
+         url('../fonts/MountRegular_PersonalUse-webfont.svg#mount_personal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font: 1.2em/1.4 $bodyfont;
+}
+
+h1, h2, h3 {
+  font: 2em/1 $headerfont;
+}
+
+.f-h {
+  font-family: $headerfont;
+}
+.f-1-5 {
+  font-size: _ems(20);
+}
+.f-2 {
+  font-size: _ems(30);
+}
+.f-3 {
+  font-size: _ems(40);
+}
+.f-4 {
+  font-size: _ems(80);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.heavy {
+  font-weight: 700;
+}
+.x-heavy {
+  font-weight: 800;
+}
+.adjective {
+  @extend .uppercase;
+  color: $blue;
+  font: 2em/1 $headerfont;
+  font-weight: 700;
+}
