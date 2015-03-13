@@ -47,6 +47,54 @@
   }
 }
 
+.nav-button {
+  display: none;
+  float: right;
+  position: relative;
+  top: 15px;
+  right: 0.5em;
+  cursor: pointer;
+  margin: 1em;
+  $width: 2em;
+  $stroke: 5px;
+  width: $width;
+  height: $width;
+  span, span:before, span:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $stroke;
+    cursor: pointer;
+    border-radius: 1px;
+    background: $grey;
+    transition: all 200ms ease;
+  }
+  span:before {
+    top: -($stroke * 2);
+  }
+  span:after {
+    bottom: -($stroke * 2);
+  }
+}
+.nav-list-open {
+  .nav-button {
+    span {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    span:before, span:after {
+      top: 0;
+    }
+    span:before {
+      transform: rotate(45deg);
+    }
+    span:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
 .headroom--unpinned {
   transform: translate3d(0,-100%,0);
 }

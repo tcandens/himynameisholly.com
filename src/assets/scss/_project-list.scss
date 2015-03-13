@@ -2,8 +2,10 @@
 .project-list {
   position: relative;
   list-style: none;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 100px auto;
   max-width: 1200px;
+  padding: 0;
+  @include clearfix();
 }
 .project-list-item {
   display: block;
@@ -18,9 +20,6 @@
   $width: 300px;
   width: $width;
   height: $width;
-  .mouseOver {
-    opacity: 1;
-  }
 }
 .project-list-thumbnail, .project-list-thumbnail__hover {
   position: absolute;

@@ -1,0 +1,100 @@
+/* MEDIAQUERIES */
+
+/* Mobile Only - Very Small Screens */
+@include mediaquery('max-width: 800px') {
+  html {
+    font-size: 80%;
+  }
+  .nav {
+    height: 70px;
+  }
+  .nav-logo {
+    width: 60px;
+    height: 60px;
+    margin: 5px 15px;
+  }
+  .nav-button {
+    display: block;
+    z-index: $z-navigation;
+  }
+  .nav-list {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,1);
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #e0dfdb;
+    @include clearfix();
+    transition: all 500ms ease;
+    transform: translate3d(0,-100%,0);
+    .f-2 {
+      font-size: 4em;
+    }
+  }
+  .nav-list-item {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+  }
+  // States for open nav-list
+  .nav-list-open {
+    .nav-list {
+      transform: translate3d(0,0,0);
+    }
+    .headroom--unpinned .nav-list {
+      transform: translate3d(0,-100%,0);
+    }
+  }
+
+  .header {
+    padding-top: 70px;
+    height: auto;
+  }
+  .header-figure {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    img {
+      $width: 320px;
+      width: $width;
+      $ratio: 0.94866; // height / width
+      height: $width * $ratio;
+      margin-left: -( $width * 0.1 );
+    }
+  }
+  .index-header-copy-yaxis {
+    position: relative;
+    // left: 0; right: 0;
+    top: -60px;
+    margin: auto;
+  }
+  .index-header-copy-xaxis {
+    max-width: 250px;
+    padding-left: 40px;
+  }
+
+  .project-list-filter {
+    margin-bottom: 100px;
+  }
+  .filter-list-category {
+    display: block;
+    width: 100%;
+    height: 40px;
+    a {
+      font-size: 60px;
+    }
+  }
+  .project-list {
+    margin-bottom: 0;
+  }
+  .project-list-item {
+    width: 100%;
+  }
+
+  .about {
+  }
+
+}

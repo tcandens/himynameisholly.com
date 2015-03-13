@@ -10,4 +10,11 @@ $(function() {
     easing: 'ease-out'
   });
 
+  $html = $('html');
+
+  $('.nav-button').on('click', function(e) {
+    e.preventDefault();
+    $html.toggleClass('nav-list-open');
+  });
+
 })();

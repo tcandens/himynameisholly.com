@@ -22,13 +22,16 @@
     @media (min-width: 35em) { @content ; }
   }
   @else if $point == mobileonly {
-    @media (max-width: 35em)  { @content ; }
+    @media (max-width: 800px)  { @content ; }
   }
   @else if $point == mobileplus {
     @media (min-width: 35em) { @content ; }
   }
   @else if $point == landscape {
     @media screen and (max-width: 50em) and (orientation: landscape) { @content ; }
+  }
+  @else {
+    @media (#{$point}) { @content ; }
   }
 }
 

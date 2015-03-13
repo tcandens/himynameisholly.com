@@ -1,13 +1,12 @@
 .about {
-  position: relative;
-  margin-top: 400px;
-  margin-bottom: -100px;
-  padding-top: 115px;
+  // margin-top: 400px;
+  padding-top: 70px;
   width: 100%;
-  height: 100%;
-  max-height: 100%;
+  // height: 100%;
+  min-height: 100%;
   background: white;
   border-top: 1px solid #e0dfdb;
+  @include clearfix();
 }
 .about-center {
   padding-top: 2em;
@@ -43,8 +42,8 @@
       opacity: 1;
     }
   }
-  @include mediaquery(phabletplus) {
-    $dimension: 180px;
+  @include mediaquery(tabletplus) {
+    $dimension: 160px;
     width: $dimension;
     height: $dimension;
   }
@@ -85,13 +84,13 @@
     margin: 0 auto;
     max-width: 42em;
     text-align: justify;
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 3em;
-       -moz-column-gap: 3em;
-            column-gap: 3em;
     @include mediaquery(landscape) {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2;
+      -webkit-column-gap: 3em;
+         -moz-column-gap: 3em;
+              column-gap: 3em;
       max-width: 100%;
     }
   }
