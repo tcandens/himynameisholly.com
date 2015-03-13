@@ -1,0 +1,105 @@
+.about {
+  position: relative;
+  margin-top: 400px;
+  margin-bottom: -100px;
+  padding-top: 115px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: white;
+  border-top: 1px solid #e0dfdb;
+}
+.about-center {
+  padding-top: 2em;
+}
+.contact-icons {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix();
+}
+.contact-icons_item {
+  display: inline-block;
+  position: relative;
+  $dimension: 100px;
+  width: $dimension;
+  height: $dimension;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background-image: url('#{$IMG_DIR}/hireme.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 300ms ease;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  @include mediaquery(phabletplus) {
+    $dimension: 180px;
+    width: $dimension;
+    height: $dimension;
+  }
+}
+
+.contact-icons_item-link {
+  display: block;
+  position: relative;
+  border: 0;  // IR
+  font: 0/0 a;  // IR
+  text-shadow: none; // IR
+  color: transparent;  // IR
+  background-color: transparent;  // IR
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &[data-link='phone'] {
+    background-image: url('#{$IMG_DIR}/phone-icon.svg');
+  }
+  &[data-link="resume"] {
+    background-image: url('#{$IMG_DIR}/resume-icon.svg');
+  }
+  &[data-link="email"] {
+    background-image: url('#{$IMG_DIR}/email-icon.svg');
+  }
+}
+
+.about-copy {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: center;
+  p {
+    font-size: 0.7em;
+    margin: 0 auto;
+    max-width: 42em;
+    text-align: justify;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 3em;
+       -moz-column-gap: 3em;
+            column-gap: 3em;
+    @include mediaquery(landscape) {
+      max-width: 100%;
+    }
+  }
+  @include mediaquery(tabletplus) {
+    padding: 0;
+  }
+}
+.about-headline {
+  color: $grey;
+  margin-bottom: 0.5em;
+}

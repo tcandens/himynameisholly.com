@@ -25,7 +25,7 @@ html, body {
 
 .main {
   width: 100%;
-  height: 100%; }
+  min-height: 100%; }
 
 /* Helper classes */
 .hidden {
@@ -94,9 +94,13 @@ h1, h2, h3 {
   left: 0;
   width: 100%;
   height: 115px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid #e0dfdb;
-  z-index: 2000; }
+  z-index: 2000;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: all 400ms ease-in;
+          transition: all 400ms ease-in; }
 
 .nav-logo {
   width: 80px;
@@ -125,6 +129,10 @@ h1, h2, h3 {
             transition: opacity 400ms ease-in; }
   .nav-list-item a:hover {
     opacity: 0.7; }
+
+.headroom--unpinned {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0); }
 
 /* Header / Hero Styles */
 .header {
@@ -171,9 +179,50 @@ h1, h2, h3 {
         -ms-transform: translateY(10px) rotate(5deg);
             transform: translateY(10px) rotate(5deg); }
 
+/* Project list */
+.project-list {
+  position: relative;
+  list-style: none;
+  margin: 0 auto 200px auto;
+  max-width: 1200px; }
+
+.project-list-item {
+  display: block;
+  width: 33.33%;
+  float: left;
+  margin-bottom: 5em; }
+
+.project-list-link {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 300px; }
+  .project-list-link .mouseOver {
+    opacity: 1; }
+
+.project-list-thumbnail, .project-list-thumbnail__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .project-list-thumbnail img, .project-list-thumbnail__hover img {
+    width: 100%;
+    height: 100%; }
+
+.project-list-thumbnail__hover {
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+          transition: opacity 200ms ease-in; }
+  .project-list-thumbnail__hover:hover {
+    opacity: 1; }
+
 /* Project List Filter */
 .project-list-filter {
-  width: 100%; }
+  width: 100%;
+  height: 89px;
+  margin-bottom: 200px; }
 
 .filter-list {
   list-style: none;
@@ -184,16 +233,217 @@ h1, h2, h3 {
   display: inline;
   float: left;
   width: 33.333%;
-  text-align: center; }
+  text-align: center;
+  height: 89px; }
   .filter-list-category a {
     color: white;
-    line-height: 0.6; }
+    line-height: 0.65;
+    font-size: 135px; }
   .filter-list-category:nth-of-type(1) {
     background-color: #93c3cf; }
+    .filter-list-category:nth-of-type(1):hover {
+      background-color: transparent; }
+      .filter-list-category:nth-of-type(1):hover a {
+        color: #93c3cf; }
   .filter-list-category:nth-of-type(2) {
     background-color: #f5cdd8; }
+    .filter-list-category:nth-of-type(2):hover {
+      background-color: transparent; }
+      .filter-list-category:nth-of-type(2):hover a {
+        color: #f5cdd8; }
   .filter-list-category:nth-of-type(3) {
     background-color: #c2cde9; }
+    .filter-list-category:nth-of-type(3):hover {
+      background-color: transparent; }
+      .filter-list-category:nth-of-type(3):hover a {
+        color: #c2cde9; }
+
+.about {
+  position: relative;
+  margin-top: 400px;
+  margin-bottom: -100px;
+  padding-top: 115px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: white;
+  border-top: 1px solid #e0dfdb; }
+
+.about-center {
+  padding-top: 2em; }
+
+.contact-icons {
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+  .contact-icons:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.contact-icons_item {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px; }
+  .contact-icons_item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background-image: url('../images/hireme.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transition: all 300ms ease;
+            transition: all 300ms ease; }
+  .contact-icons_item:hover:after {
+    opacity: 1; }
+  @media (min-width: 35em) {
+    .contact-icons_item {
+      width: 180px;
+      height: 180px; } }
+
+.contact-icons_item-link {
+  display: block;
+  position: relative;
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .contact-icons_item-link[data-link='phone'] {
+    background-image: url('../images/phone-icon.svg'); }
+  .contact-icons_item-link[data-link="resume"] {
+    background-image: url('../images/resume-icon.svg'); }
+  .contact-icons_item-link[data-link="email"] {
+    background-image: url('../images/email-icon.svg'); }
+
+.about-copy {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: center; }
+  .about-copy p {
+    font-size: 0.7em;
+    margin: 0 auto;
+    max-width: 42em;
+    text-align: justify;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap: 3em; }
+    @media screen and (max-width: 50em) and (orientation: landscape) {
+      .about-copy p {
+        max-width: 100%; } }
+  @media (min-width: 50em) {
+    .about-copy {
+      padding: 0; } }
+
+.about-headline {
+  color: #58595b;
+  margin-bottom: 0.5em; }
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #f5cdd8;
+  z-index: 2000; }
+  @media (max-width: 35em) {
+    .footer {
+      overflow-y: hidden;
+      overflow-x: scroll; } }
+
+.social-icons {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  text-align: center; }
+  @media (min-width: 35em) {
+    .social-icons {
+      display: block; } }
+
+.social-icons_item {
+  display: table-cell;
+  padding: 10px;
+  width: 100px;
+  height: 100px; }
+  @media (min-width: 35em) and (max-width: 50em) {
+    .social-icons_item {
+      width: 80px;
+      height: 80px; } }
+  @media (min-width: 35em) {
+    .social-icons_item {
+      display: inline-block; } }
+  @media (min-width: 50em) {
+    .social-icons_item {
+      width: 100px;
+      height: 100px; } }
+
+.social-icons_link {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden; }
+  .social-icons_link:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%; }
+  .social-icons_link[href^="http://www.facebook"] {
+    background-image: url('../images/icons/facebook.svg'); }
+  .social-icons_link[href^="http://www.twitter"] {
+    background-image: url('../images/icons/twitter.svg'); }
+  .social-icons_link[href^="http://www.linkedin"] {
+    background-image: url('../images/icons/linkedin.svg'); }
+  .social-icons_link[href^="http://www.tumblr.com"] {
+    background-image: url('../images/icons/tumblr.svg'); }
+  .social-icons_link[href^="http://www.instagram.com"] {
+    background-image: url('../images/icons/instagram.svg'); }
+  @media (min-width: 70em) {
+    .social-icons_link {
+      border-radius: 100%;
+      border: 20px solid #f5cdd8; }
+      .social-icons_link:hover {
+        background-color: #f5cdd8;
+        background-size: cover;
+        border-radius: 0;
+        border: 0; }
+      .social-icons_link[href^="http://www.facebook"] {
+        background-color: #53be93; }
+        .social-icons_link[href^="http://www.facebook"]:hover {
+          background-color: transparent; }
+      .social-icons_link[href^="http://www.twitter"] {
+        background-color: #db98e5; }
+        .social-icons_link[href^="http://www.twitter"]:hover {
+          background-color: transparent; }
+      .social-icons_link[href^="http://www.linkedin"] {
+        background-color: #92c3ce; }
+        .social-icons_link[href^="http://www.linkedin"]:hover {
+          background-color: transparent; }
+      .social-icons_link[href^="http://www.tumblr.com"] {
+        background-color: #c2cde9; }
+        .social-icons_link[href^="http://www.tumblr.com"]:hover {
+          background-color: transparent; }
+      .social-icons_link[href^="http://www.instagram.com"] {
+        background-color: #f79e86; }
+        .social-icons_link[href^="http://www.instagram.com"]:hover {
+          background-color: transparent; } }
 
 .hll {
   background-color: #ffffcc; }

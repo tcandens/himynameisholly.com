@@ -1,3 +1,52 @@
 @function _ems($pixels) {
   @return ( $pixels / 16 ) + em;
 }
+
+@mixin mediaquery($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 50em) and (max-width: 70em) { @content ; }
+  }
+  @else if $point == tabletplus {
+    @media (min-width: 50em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 35em) and (max-width: 50em)  { @content ; }
+  }
+  @else if $point == phabletplus {
+    @media (min-width: 35em) { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 35em)  { @content ; }
+  }
+  @else if $point == mobileplus {
+    @media (min-width: 35em) { @content ; }
+  }
+  @else if $point == landscape {
+    @media screen and (max-width: 50em) and (orientation: landscape) { @content ; }
+  }
+}
+
+@mixin hide-text {
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
