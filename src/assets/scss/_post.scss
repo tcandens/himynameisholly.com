@@ -1,0 +1,52 @@
+/* Single Post Styles */
+.post-header-title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.project-logo {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background-image: url('#{$IMG_DIR}/projects/mos/icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 54%;
+    width: 100%;
+    height: 2px;
+    background: $red;
+  }
+  &:before {
+    left: -110%;
+  }
+  &:after {
+    left: 110%;
+  }
+}
+.project-title {
+  text-align: center;
+}
+.post-header-copy {
+  p {
+    // @include .f-1-5;
+    margin: 0 auto;
+    // max-width: 42em;
+    // margin-left: 20%;
+  }
+}
+.project-categories {
+  list-style: none;
+  float: left;
+  padding: 0 80px;
+}
+.project-description {
+  // width:;
+  padding: 0 40px;
+}
+.post-container img {
+  width: 100%;
+}

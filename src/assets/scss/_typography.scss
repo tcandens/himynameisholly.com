@@ -45,6 +45,15 @@ h1, h2, h3 {
 .f-4 {
   font-size: _ems(80);
 }
+.f-5 {
+  font-size: _ems(100);
+}
+.teal {
+  color: $teal;
+}
+.red {
+  color: $red;
+}
 
 .uppercase {
   text-transform: uppercase;

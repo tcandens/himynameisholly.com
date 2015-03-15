@@ -7,7 +7,8 @@ $(function() {
     enter:  'bottom',
     move:   '200px',
     over:   '500ms',
-    easing: 'ease-out'
+    easing: 'ease-out',
+    scale: { direction: 'up', power: '0' }
   });
 
   $html = $('html');
