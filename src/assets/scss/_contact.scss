@@ -1,0 +1,74 @@
+.contact-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  bottom: 0; right: 0;
+  padding-top: 120px;
+  background: transparentize($blue, 0.2);
+  z-index: $z-navigation;
+  transform: translate3d(0, -100%, 0);
+  transition: all 400ms ease;
+}
+.contact-callout {
+  font: 9em/0.8 $bodyfont;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+}
+.contact-overlay-esc {
+  display: block;
+  margin: -80px auto 20px auto;
+  background: transparent;
+  $width: 45px;
+  $stroke: 10px;
+  width: $width;
+  height: $width;
+  span, span:before, span:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $stroke;
+    cursor: pointer;
+    border-radius: 1px;
+    transition: all 200ms ease;
+  }
+  span {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  span:before {
+    transform: rotate(45deg);
+    top: 12px;
+    background-color: white;
+  }
+  span:after {
+    transform: rotate(-45deg);
+    background-color: white;
+    top: 12px;
+  }
+}
+
+
+.contact-overlay-open {
+
+  .contact-overlay {
+    transform: translate3d(0,0,0);
+  }
+  // .contact-overlay-esc {
+  //   span {
+  //     background-color: transparent;
+  //     box-shadow: none;
+  //   }
+  //   span:before, span:after {
+  //     top: 0;
+  //     background: white;
+  //   }
+  //   span:before {
+  //     top: ( $stroke * 2.8 );
+  //   }
+  //   span:after {
+  //     bottom: -( $stroke * 1.4 );
+  //   }
+  // }
+}

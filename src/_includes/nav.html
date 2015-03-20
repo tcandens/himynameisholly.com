@@ -3,9 +3,22 @@
   <a href="{{ site.url }}"><div class="nav-logo logo"></div></a>
   <a href="#" class="nav-button"><span></span></a>
   <ul class="nav-list">
-    <li class="nav-list-item f-2"><a href="#">Work</a></li>
-    <li class="nav-list-item f-2"><a href="#">About</a></li>
-    <li class="nav-list-item f-2"><a href="#">Services</a></li>
-    <li class="nav-list-item f-2"><a href="#">Contact</a></li>
+    <li class="nav-list-item f-2">
+      {% if page.url == 'index.html' %}
+      <a href="#work">Work</a>
+      {% else %}
+      <a href="{{ site.url }}/#work">Work</a>
+      {% endif %}
+    </li>
+    <li class="nav-list-item f-2"><a id="contact-button" href="#">Contact</a></li>
+    <li class="social-links">
+      <ul class="social-icons">
+        <li class="social-icons_item"><a href="http://www.facebook.com" class="social-icons_link">Facebook</a></li>
+        <li class="social-icons_item"><a href="http://www.linkedin.com" class="social-icons_link">LinkedIn</a></li>
+        <li class="social-icons_item"><a href="http://www.twitter.com" class="social-icons_link">Twitter</a></li>
+        <li class="social-icons_item"><a href="http://www.tumblr.com" class="social-icons_link">Tumblr</a></li>
+        <li class="social-icons_item"><a href="http://www.instagram.com" class="social-icons_link">Instagram</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>

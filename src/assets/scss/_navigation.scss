@@ -43,7 +43,7 @@
     transition: opacity 400ms ease-in;
   }
   a:hover {
-    opacity: 0.7;
+    opacity: 0.5;
   }
 }
 
@@ -55,8 +55,8 @@
   right: 0.5em;
   cursor: pointer;
   margin: 1em;
-  $width: 2em;
-  $stroke: 5px;
+  $width: 45px;
+  $stroke: 10px;
   width: $width;
   height: $width;
   span, span:before, span:after {
@@ -67,14 +67,16 @@
     height: $stroke;
     cursor: pointer;
     border-radius: 1px;
-    background: $grey;
+    background: $pink;
     transition: all 200ms ease;
   }
   span:before {
-    top: -($stroke * 2);
+    top: -( $stroke * 1.4 );
+    background: $blue;
   }
   span:after {
-    bottom: -($stroke * 2);
+    bottom: -( $stroke * 1.4 );
+    background: $perriwinkle;
   }
 }
 .nav-list-open {
@@ -85,6 +87,7 @@
     }
     span:before, span:after {
       top: 0;
+      background: white;
     }
     span:before {
       transform: rotate(45deg);
@@ -96,4 +99,47 @@
 }
 .headroom--unpinned {
   transform: translate3d(0,-100%,0);
+}
+
+.social-icons {
+  display: none;
+  margin: 3em 0;
+  text-align: center;
+}
+
+.social-icons_item {
+  display: inline-block;
+  // padding: 10px;
+  $dimension: 15%;
+  width: $dimension;
+  height: $dimension;
+}
+.social-icons_link {
+  display: block;
+  margin: 0 auto;
+  $dimension: 50px;
+  width: $dimension;
+  height: $dimension;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 400ms ease;
+  @include hide-text;
+  &[href^="http://www.facebook"] {
+    background-image: url('#{$IMG_DIR}/icons/facebook.svg');
+  }
+  &[href^="http://www.twitter"] {
+    background-image: url('#{$IMG_DIR}/icons/twitter.svg');
+  }
+  &[href^="http://www.linkedin"] {
+    background-image: url('#{$IMG_DIR}/icons/linkedin.svg');
+  }
+  &[href^="http://www.tumblr.com"] {
+    background-image: url('#{$IMG_DIR}/icons/tumblr.svg');
+  }
+  &[href^="http://www.instagram.com"] {
+    background-image: url('#{$IMG_DIR}/icons/instagram.svg');
+  }
+  &:hover {
+    opacity: 0.5;
+  }
 }

@@ -1,15 +1,13 @@
 
 .footer {
   width: 100%;
-  height: 100px;
-  margin-top: -100px;
+  height: 200px;
+  // margin-top: -100px;
   background: $pink;
   z-index: $z-navigation;
-  @include mediaquery(mobileonly) {
-    overflow-y: hidden;
-    overflow-x: scroll;
-  }
 }
+
+/*
 .social-icons {
   display: table;
   margin: 0 auto;
@@ -112,3 +110,5 @@ $icon-instagram: #f79e86;
     }
   }
 }
+
+*/

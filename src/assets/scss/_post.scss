@@ -7,10 +7,10 @@
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  background-image: url('#{$IMG_DIR}/projects/mos/icon.png');
+  // background-image: url('#{$IMG_DIR}/projects/mos/icon.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   &:before, &:after {
     content: '';
     display: block;
@@ -18,7 +18,7 @@
     top: 54%;
     width: 100%;
     height: 2px;
-    background: $red;
+    // background-color: $red;
   }
   &:before {
     left: -110%;
@@ -31,22 +31,87 @@
   text-align: center;
 }
 .post-header-copy {
-  p {
-    // @include .f-1-5;
-    margin: 0 auto;
-    // max-width: 42em;
-    // margin-left: 20%;
-  }
+  margin: 0 auto;
+  width: 90%;
 }
 .project-categories {
   list-style: none;
   float: left;
-  padding: 0 80px;
+  width: 20%;
+  // padding: 0 80px;
 }
 .project-description {
-  // width:;
+  width: 80%;
+  margin-left: 20%;
   padding: 0 40px;
 }
 .post-container img {
   width: 100%;
+}
+
+.post-605 {
+  $color: #b4d361;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
+}
+.post-ww {
+  $color: #f8a18a;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
+}
+.post-sqtm {
+  $color: #e27171;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
+}
+.post-mos {
+  $color: #de4344;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
+}
+.post-julep {
+  $color: #b982b9;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
+}
+.post-do {
+  $color: #6e6f2e;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
 }

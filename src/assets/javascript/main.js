@@ -19,6 +19,17 @@ $(function() {
     $html.toggleClass('nav-list-open');
   });
 
+  $('#contact-button').on('click', function(e) {
+    e.preventDefault();
+    $html.removeClass('nav-list-open');
+    $html.toggleClass('contact-overlay-open');
+  })
+
+  $('#contact-overlay-esc').on('click', function(e) {
+    e.preventDefault();
+    $html.removeClass('contact-overlay-open');
+  })
+
   var fixViewportUnits = function() {
     $('.100vh').css({'height': $( window ).height()});
   };
