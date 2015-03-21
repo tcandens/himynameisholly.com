@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 ---
 {% include main-header.html %}
 
@@ -13,7 +14,7 @@ layout: default
   </aside>
   <ul class="project-list">
     {% for post in site.posts %}
-    <li data-sr class="project-list-item"><a class="project-list-link" href="{{ post.url }}">
+    <li data-sr class="project-list-item"><a class="project-list-link" href="{{ post.url | prepend: site.url }}">
         <h1 class="project-list-title hidden">{{ post.title }}</h1>
         <img src="assets/images/thumbnails/{{ post.shortcode }}_name.svg" alt="{{ post.title }}" class="project-list-thumbnail">
         <div class="project-list-thumbnail__hover" style="background-image:url('assets/images/thumbnails/{{ post.shortcode }}_icon.svg')">
