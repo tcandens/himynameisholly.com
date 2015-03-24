@@ -70,3 +70,14 @@ h1, h2, h3 {
   font: 2em/1 $headerfont;
   font-weight: 700;
 }
+
+.wf-loading {
+  h1, h2, h3 {
+    visibility: hidden;
+  }
+}
+.wf-loading {
+  h1, h2, h3 {
+    visibility: visible;
+  }
+}

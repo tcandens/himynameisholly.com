@@ -8,11 +8,11 @@ layout: default
   </section>
   <section class="header-copy post-header-copy teal">
     <ul class="project-categories">
-      {% for category in page.categories %}
-      <li class="project-category f-h f-2 heavy">{{ category }}</li>
+      {% for duty in page.duties %}
+      <li class="project-category f-2">{{ duty }}</li>
       {% endfor %}
     </ul>
-    <div class="project-description">
+    <div class="project-description f-h">
       {{ page.description }}
     </div>
   </section>

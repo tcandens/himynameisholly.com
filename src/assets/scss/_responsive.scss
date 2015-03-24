@@ -142,6 +142,10 @@
     margin: 0 auto 2em auto;
     padding: 0;
   }
+  .footer-social-icons {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @include mediaquery('max-width: 400px') {
