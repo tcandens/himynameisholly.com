@@ -12,6 +12,9 @@
   width: 33.33%;
   float: left;
   margin-bottom: 5em;
+  &:nth-of-type(4n-1):last-child {
+    width: 100%;
+  }
 }
 .project-list-link {
   margin: 0 auto;
