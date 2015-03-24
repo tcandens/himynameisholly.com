@@ -116,6 +116,13 @@
     margin-bottom: 1em;
   }
 
+  .project-list-thumbnail__hover {
+    opacity: 0;
+    &:hover, &:active {
+      opacity: 1;
+    }
+  }
+
   .project-categories {
     float: none;
     clear: both;

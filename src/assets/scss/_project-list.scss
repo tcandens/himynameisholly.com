@@ -36,9 +36,9 @@
 
 }
 .project-list-thumbnail__hover {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 200ms ease-in;
   &:hover {
-    opacity: 1;
+    opacity: 0;
   }
 }
