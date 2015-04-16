@@ -28,21 +28,25 @@
 .footer-social-icons_item {
   display: table-cell;
   padding: 10px;
-  $dimension: 100px;
-  width: $dimension;
-  height: $dimension;
-  @include mediaquery(phablet) {
-    $dimension: 80px;
-    width: $dimension;
-    height: $dimension;
-  }
+  // $dimension: 100px;
+  // width: $dimension;
+  // height: $dimension;
+  transition: opacity 400ms ease;
+  // @include mediaquery(phablet) {
+  //   $dimension: 80px;
+  //   width: $dimension;
+  //   height: $dimension;
+  // }
   @include mediaquery(phabletplus) {
     display: inline-block;
   }
-  @include mediaquery(tabletplus) {
-    $dimension: 100px;
-    width: $dimension;
-    height: $dimension;
+  // @include mediaquery(tabletplus) {
+  //   $dimension: 100px;
+  //   width: $dimension;
+  //   height: $dimension;
+  // }
+  &:hover {
+    opacity: 0.6;
   }
 }
 
@@ -60,7 +64,7 @@ $icon-instagram: #f79e86;
   background-size: cover;
   background-repeat: no-repeat;
   @include hide-text;
-  &[href^="http://www.facebook"] {
+  &[href^="http://www.facebook.com"] {
     background-image: url('#{$IMG_DIR}/icons/facebook.svg');
   }
   &[href^="http://www.twitter"] {

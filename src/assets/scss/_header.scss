@@ -1,7 +1,7 @@
 /* Header / Hero Styles */
 .header {
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh; // Portrait tablet looking stupid
   width: 100%;
   padding-top: 70px;
   overflow: auto;
@@ -9,6 +9,7 @@
 .index-header {
   background-image: url('#{$IMG_DIR}/index-header/notebook.png');
   background-repeat: no-repeat;
+  min-height: 100vh;
   background-size: auto 80%;
   background-position: center 100px;
   overflow: hidden;
@@ -16,11 +17,12 @@
 .index-header-copy-yaxis {
   position: absolute;
   left: 0; right: 0;
-  top: 77%;
+  top: 80%;
 }
 .index-header-copy-xaxis {
   width: 100%;
   margin: auto;
+  margin-left: 30px; // Moves text away from pen in header figure
   text-align: center;
   text-shadow: 1px 1px 0 white;
 }

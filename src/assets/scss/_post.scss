@@ -8,7 +8,7 @@
   width: 100px;
   height: 100px;
   // background-image: url('#{$IMG_DIR}/projects/mos/icon.png');
-  background-size: contain;
+  // background-size: contain; // Raster images looking fuzzy
   background-repeat: no-repeat;
   background-position: 50% 50%;
   &:before, &:after {

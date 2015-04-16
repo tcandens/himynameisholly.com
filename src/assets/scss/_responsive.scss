@@ -61,36 +61,9 @@
   .index-header {
     background-position: center 80px;
   }
-
-  // .header {
-  //   padding-top: 70px;
-  //   min-height: 0;
-  //   overflow: hidden;
-  // }
-  // .header-figure {
-  //   position: relative;
-  //   width: 100%;
-  //   margin-top: 20px;
-  //   text-align: center;
-  //   img {
-  //     $width: 320px;
-  //     width: $width;
-  //     $ratio: 0.94866; // height / width
-  //     height: $width * $ratio;
-  //     margin-left: -( $width * 0.1 );
-  //   }
-  // }
-  // .index-header-copy-yaxis {
-  //   position: relative;
-  //   // left: 0; right: 0;
-  //   top: -60px;
-  //   margin: auto;
-  // }
-  // .index-header-copy-xaxis {
-  //   max-width: 250px;
-  //   padding-left: 40px;
-  // }
-
+  .index-header-copy-xaxis {
+    margin-left: 0;
+  }
   .project-list-filter {
     margin-bottom: 100px;
   }
@@ -156,6 +129,7 @@
     display: none;
     visibility: hidden;
   }
+
 }
 
 @include mediaquery('max-width: 400px') {
@@ -165,5 +139,20 @@
   .project-list-link {
     width: 300px;
     height: 300px;
+  }
+}
+
+@include mediaquery('min-width: 1279px') {
+  .header {
+    min-height: 100vh;
+  }
+}
+
+@include mediaquery('min-width: 1400px') {
+  .f-1-5 {
+    font-size: 2em;
+  }
+  .adjective {
+    font-size: 3em;
   }
 }
