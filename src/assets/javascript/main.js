@@ -86,61 +86,101 @@ $(function() {
   $('.fittext').fitText();
 
   // PROJECT FILTER
+  var projectListCache = $('#project-list').html();
   var projectFilter = function() {
-    $printFilter = $('#category-print-button');
-    $webFilter = $('#category-web-button');
-    $etcFilter = $('#category-etc-button');
-    $items = $('.project-list-item');
-    $print = $('.category-print');
-    $web = $('.category-web');
-    $etc = $('.category-etc');
-    $list = $('#project-list');
+    var cache = projectListCache;
+    var $printFilter = $('#category-print-button');
+    var $webFilter = $('#category-web-button');
+    var $etcFilter = $('#category-etc-button');
+    var $items = $('.project-list-item');
+    var $print = $('.category-print');
+    var $web = $('.category-web');
+    var $etc = $('.category-etc');
+    var $list = $('#project-list');
     $printFilter.on('click', function(e) {
       if ( $(this).hasClass('active') ) {
+        e.preventDefault();
         $(this).removeClass('active');
-        $list.emtpy();
-        $list.html($items);
+        $list.fadeOut(400).delay(400).empty().html(cache).fadeIn(400);
       } else {
         e.preventDefault();
-        $list.empty();
-        $list.html($items);
+        $list.fadeOut(400).delay(400).empty();
+        $list.html(cache);
         $('.active').removeClass('active');
         $(this).addClass('active');
-        $web.detach();
-        $etc.detach();
+        $('.category-web').detach();
+        $('.category-etc').detach();
+        $list.fadeIn(400);
       };
     });
     $webFilter.on('click', function(e) {
       if ( $(this).hasClass('active') ) {
         $(this).removeClass('active');
-        $list.emtpy();
-        $list.html($items);
+        $list.hide().empty().html(cache).show(400);
       } else {
         e.preventDefault();
+        $list.hide();
         $list.empty();
-        $list.html($items);
+        $list.html(cache);
         $('.active').removeClass('active');
         $(this).addClass('active');
-        $print.detach();
-        $etc.detach();
+        $('.category-print').detach();
+        $('.category-etc').detach();
+        $list.show(400);
       }
     });
     $etcFilter.on('click', function(e) {
       if ( $(this).hasClass('active') ) {
         $(this).removeClass('active');
-        $list.emtpy();
-        $list.html($items);
+        $list.hide().empty().html(cache).show(400);
       } else {
         e.preventDefault();
+        $list.hide();
         $list.empty();
-        $list.html($items);
+        $list.html(cache);
         $('.active').removeClass('active');
         $(this).addClass('active');
-        $print.detach();
-        $web.detach();
+        $('.category-print').detach();
+        $('.category-web').detach();
+        $list.show(400);
       }
     });
   }
   projectFilter();
+
+  // Adjective Shuffler
+  var adjectives = [
+    ["Graphic", "Designer"],
+    ["Ravenclaw"],
+    ["Simlish", "translator"],
+    ["Star Trek", "enthusiast"],
+    ["Graphics", "Coordinator"],
+    ["Problem", "Solver"],
+    ["Logic", "lover"],
+    ["Dog", "Person"]
+  ]
+
+  var shuffle = function() {
+    var rand = Math.floor( Math.random() * adjectives.length );
+    var string = "";
+    adjectives[rand].forEach(function( i ) {
+      string += "<span class='adjective shuffleIn'>" + i + "</span>";
+    });
+    $('.index-header-copy-adjectives').html(string);
+  };
+  shuffle();
+
+  $('.index-header-shuffle').on('click', function() {
+    var $adjs = $('.adjective');
+    $adjs.removeClass('shuffleIn');
+    $adjs.addClass('shuffleOut');
+    var timeout1 = setTimeout(function() {
+      shuffle();
+    }, 400);
+    // var timeout2 = setTimeout(function() {
+    //   $adjs.removeClass('shuffleIn');
+    // }, 800);
+    // shuffle();
+  });
 
 })();

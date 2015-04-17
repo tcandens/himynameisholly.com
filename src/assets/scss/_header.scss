@@ -20,11 +20,27 @@
   top: 80%;
 }
 .index-header-copy-xaxis {
+  position: relative;
   width: 100%;
   margin: auto;
   margin-left: 30px; // Moves text away from pen in header figure
   text-align: center;
   text-shadow: 1px 1px 0 white;
+}
+.index-header-shuffle {
+  position: absolute;
+  top: 0;
+  left: 66%;
+  width: 100px;
+  height: 100px;
+  background-color: $teal;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    background-color: $red;
+  }
 }
 .index-header-copy-adjectives {
   margin-top: 10px;
@@ -38,4 +54,29 @@
   &:nth-of-type(2) {
     transform: translateY(10px) rotate(5deg);
   }
+}
+@keyframes shuffleOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes shuffleIn {
+  0% {
+    opacity: 0;
+    transform: rotate(20deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.shuffleOut {
+  animation: shuffleOut 400ms ease;
+}
+.shuffleIn {
+  animation: shuffleIn 400ms ease;
 }
