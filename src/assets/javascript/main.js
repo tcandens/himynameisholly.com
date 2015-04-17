@@ -140,7 +140,6 @@ $(function() {
         $web.detach();
       }
     });
-
   }
   projectFilter();
 

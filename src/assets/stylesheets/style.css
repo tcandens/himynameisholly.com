@@ -147,6 +147,22 @@ h1, h2, h3 {
   -webkit-animation: fade 400ms ease;
           animation: fade 400ms ease; }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+
+  100% {
+    opacity: 0; } }
+
 .nav {
   position: fixed;
   top: 0;

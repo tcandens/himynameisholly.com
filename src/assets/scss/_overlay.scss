@@ -18,3 +18,12 @@
   opacity: 0;
   animation: fade 400ms ease;
 }
+@keyframes fade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0
+  }
+}
