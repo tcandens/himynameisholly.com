@@ -171,6 +171,17 @@ $(function() {
     }, 400);
   });
 
-
+  // SmoothState.js
+  var content = $('#content').smoothState({
+        onStart: {
+          duration: 400,
+          render: function (url, $container) {
+            content.toggleAnimationClass('is-exiting');
+            window.setTimeout(function() {
+              $('html, body').scrollTop(0);
+            }, 400)
+          }
+        }
+      }).data('smoothState');
 
 })();

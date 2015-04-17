@@ -1,0 +1,24 @@
+.scene .scene_element {
+  animation-duration: 400ms;
+  transition-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.scene .scene_element--fadeinLeft {
+  animation-name: fadeinleft;
+}
+
+.scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,10%,0) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0) scale(1);
+  }
+}

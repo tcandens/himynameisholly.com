@@ -49,10 +49,10 @@
 .index-header-copy-adjectives .adjective {
   display: inline-block;
   &:nth-of-type(1) {
-    transform: rotate(-10deg);
+    transform: translateX(-10px) rotate(-10deg);
   }
   &:nth-of-type(2) {
-    transform: translateY(10px) rotate(5deg);
+    transform: translateX(10px) rotate(5deg);
   }
 }
 @keyframes shuffleOut {
@@ -76,13 +76,13 @@
 }
 .shuffleOut {
   animation: shuffleOut 400ms ease;
-  &:nth-of-type(2) {
-    animation-direction: reverse;
-  }
+  // &:nth-of-type(2) {
+  //   animation-direction: reverse;
+  // }
 }
 .shuffleIn {
   animation: shuffleIn 400ms ease;
-  &:nth-of-type(2) {
-    animation-direction: reverse;
-  }
+  // &:nth-of-type(2) {
+  //   animation-direction: reverse;
+  // }
 }
