@@ -12,9 +12,9 @@
   width: 33.33%;
   float: left;
   margin-bottom: 5em;
-  &:nth-of-type(4n-1):last-child {
-    width: 100%;
-  }
+  // &:nth-of-type(4n-1):last-child {
+  //   width: 100%;
+  // }
 }
 .filtered {
   opacity: 0;

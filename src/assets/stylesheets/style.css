@@ -468,8 +468,6 @@ h1, h2, h3 {
   width: 33.33%;
   float: left;
   margin-bottom: 5em; }
-  .project-list-item:nth-of-type(4n-1):last-child {
-    width: 100%; }
 
 .filtered {
   opacity: 0; }

@@ -86,67 +86,36 @@ $(function() {
   $('.fittext').fitText();
 
   // PROJECT FILTER
+  var projectCategories = [
+    "etc",
+    "web",
+    "print"
+  ];
   var projectListCache = $('#project-list').html();
-  var projectFilter = function() {
-    var cache = projectListCache;
-    var $printFilter = $('#category-print-button');
-    var $webFilter = $('#category-web-button');
-    var $etcFilter = $('#category-etc-button');
-    var $items = $('.project-list-item');
-    var $print = $('.category-print');
-    var $web = $('.category-web');
-    var $etc = $('.category-etc');
-    var $list = $('#project-list');
-    $printFilter.on('click', function(e) {
-      if ( $(this).hasClass('active') ) {
-        e.preventDefault();
-        $(this).removeClass('active');
-        $list.fadeOut(400).delay(400).empty().html(cache).fadeIn(400);
-      } else {
-        e.preventDefault();
-        $list.fadeOut(400).delay(400).empty();
-        $list.html(cache);
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-        $('.category-web').detach();
-        $('.category-etc').detach();
-        $list.fadeIn(400);
-      };
-    });
-    $webFilter.on('click', function(e) {
-      if ( $(this).hasClass('active') ) {
-        $(this).removeClass('active');
-        $list.hide().empty().html(cache).show(400);
-      } else {
-        e.preventDefault();
-        $list.hide();
-        $list.empty();
-        $list.html(cache);
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-        $('.category-print').detach();
-        $('.category-etc').detach();
-        $list.show(400);
-      }
-    });
-    $etcFilter.on('click', function(e) {
-      if ( $(this).hasClass('active') ) {
-        $(this).removeClass('active');
-        $list.hide().empty().html(cache).show(400);
-      } else {
-        e.preventDefault();
-        $list.hide();
-        $list.empty();
-        $list.html(cache);
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-        $('.category-print').detach();
-        $('.category-web').detach();
-        $list.show(400);
-      }
-    });
+  var projectFilter = function(category) {
+    var _reset = function() {
+      $('#project-list').html(projectListCache);
+    };
+    var $mirror = $('[data-category]:not([data-catgory="' + category + '"])');
+    var $target = $('[data-category="' + category + '"]');
+    var $button = $('#category-' + category + '-button');
+    // Toggle class of button
+    // If button already active, return list to default cache of items and remove active class
+    if ( $button.hasClass('active') ) {
+      _reset();
+      $button.removeClass('active');
+    } else {
+      _reset();
+      $('.active').removeClass('active');
+      $button.addClass('active');
+      $('[data-category]:not([data-category=' + category + '])').detach();
+    }
   }
-  projectFilter();
+  projectCategories.forEach(function( category ) {
+    $('#category-' + category + '-button').on('click', function() {
+      projectFilter( category );
+    } );
+  });
 
   // Adjective Shuffler
   var adjectives = [
@@ -158,8 +127,7 @@ $(function() {
     ["Problem", "Solver"],
     ["Logic", "lover"],
     ["Dog", "Person"]
-  ]
-
+  ];
   var shuffle = function() {
     var rand = Math.floor( Math.random() * adjectives.length );
     var string = "";
