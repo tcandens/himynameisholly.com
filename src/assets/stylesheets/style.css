@@ -446,10 +446,16 @@ h1, h2, h3 {
 .shuffleOut {
   -webkit-animation: shuffleOut 400ms ease;
           animation: shuffleOut 400ms ease; }
+  .shuffleOut:nth-of-type(2) {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse; }
 
 .shuffleIn {
   -webkit-animation: shuffleIn 400ms ease;
           animation: shuffleIn 400ms ease; }
+  .shuffleIn:nth-of-type(2) {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse; }
 
 /* Project list */
 .project-list {
