@@ -93,22 +93,41 @@ $(function() {
   ];
   var projectListCache = $('#project-list').html();
   var projectFilter = function(category) {
+    var $container = $('#project-list');
     var _reset = function() {
       $('#project-list').html(projectListCache);
     };
-    var $mirror = $('[data-category]:not([data-catgory="' + category + '"])');
-    var $target = $('[data-category="' + category + '"]');
+    var _animate = function(callback) {
+      $container.addClass('sorting');
+      var temp = setTimeout(function() {
+        console.log('Timeout');
+        $container.removeClass('sorting')
+        callback();
+        $container.addClass('sorted');
+      }, 400);
+      var temp2 = setTimeout(function() {
+        $container.removeClass('sorted');
+      }, 800);
+
+    };
+    var $list = $( projectListCache ); // New jQ object to mold
+    var $mirror = $list.filter('[data-category]:not([data-catgory="' + category + '"])');
+    var $target = $list.filter('[data-category="' + category + '"]');
     var $button = $('#category-' + category + '-button');
+    var _mold = function() {
+      $container.html( $target );
+    };
     // Toggle class of button
     // If button already active, return list to default cache of items and remove active class
     if ( $button.hasClass('active') ) {
-      _reset();
+      _animate(_reset);
       $button.removeClass('active');
     } else {
-      _reset();
+      _animate(_reset);
       $('.active').removeClass('active');
       $button.addClass('active');
-      $('[data-category]:not([data-category=' + category + '])').detach();
+      // $('[data-category]:not([data-category=' + category + '])').detach();
+      _animate(_mold);
     }
   }
   projectCategories.forEach(function( category ) {
@@ -128,9 +147,14 @@ $(function() {
     ["Logic", "lover"],
     ["Dog", "Person"]
   ];
+  var current = 0;
   var shuffle = function() {
-    var rand = Math.floor( Math.random() * adjectives.length );
     var string = "";
+    var rand = Math.floor( Math.random() * adjectives.length );
+    if ( rand === current ) {
+      rand = Math.floor( Math.random() * adjectives.length );
+    }
+    current = rand;
     adjectives[rand].forEach(function( i ) {
       string += "<span class='adjective shuffleIn'>" + i + "</span>";
     });
@@ -145,10 +169,8 @@ $(function() {
     var timeout1 = setTimeout(function() {
       shuffle();
     }, 400);
-    // var timeout2 = setTimeout(function() {
-    //   $adjs.removeClass('shuffleIn');
-    // }, 800);
-    // shuffle();
   });
+
+
 
 })();

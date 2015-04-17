@@ -467,10 +467,15 @@ h1, h2, h3 {
   display: block;
   width: 33.33%;
   float: left;
-  margin-bottom: 5em; }
-
-.filtered {
-  opacity: 0; }
+  margin-bottom: 5em;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+          transition: transform 300ms ease-out; }
+  .project-list-item:nth-child(n):hover {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-5deg);
+            transform: translate3d(0, 0, 0) rotate(-5deg); }
+  .project-list-item:nth-child(2n):hover {
+    -webkit-transform: translate3d(0, 0, 0) rotate(5deg);
+            transform: translate3d(0, 0, 0) rotate(5deg); }
 
 .project-list-link {
   margin: 0 auto;
@@ -496,6 +501,58 @@ h1, h2, h3 {
           transition: opacity 200ms ease-in; }
   .project-list-thumbnail__hover:hover {
     opacity: 0; }
+
+.sorting li {
+  -webkit-animation: sorting 400ms ease-in-out;
+          animation: sorting 400ms ease-in-out; }
+
+.sorted li {
+  -webkit-animation: sorted 400ms ease-in-out;
+          animation: sorted 400ms ease-in-out; }
+
+@-webkit-keyframes sorting {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0); } }
+
+@keyframes sorting {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0); } }
+
+@-webkit-keyframes sorted {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes sorted {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
 
 /* Project List Filter */
 .project-list-filter {

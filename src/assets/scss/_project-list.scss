@@ -12,12 +12,13 @@
   width: 33.33%;
   float: left;
   margin-bottom: 5em;
-  // &:nth-of-type(4n-1):last-child {
-  //   width: 100%;
-  // }
-}
-.filtered {
-  opacity: 0;
+  transition: transform 300ms ease-out;
+  &:nth-child(n):hover {
+    transform: translate3d(0,0,0) rotate(-5deg);
+  }
+  &:nth-child(2n):hover {
+    transform: translate3d(0,0,0) rotate(5deg);
+  }
 }
 .project-list-link {
   margin: 0 auto;
@@ -46,5 +47,36 @@
   transition: opacity 200ms ease-in;
   &:hover {
     opacity: 0;
+  }
+}
+.sorting {
+  li {
+    animation: sorting 400ms ease-in-out;
+  }
+}
+.sorted {
+  li {
+    animation: sorted 400ms ease-in-out;
+  }
+}
+
+@keyframes sorting {
+  0% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0,100px,0);
+  }
+}
+@keyframes sorted {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100px,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
   }
 }
