@@ -7,7 +7,7 @@
   overflow: auto;
 }
 .index-header {
-  background-image: url('#{$IMG_DIR}/index-header/notebook.png');
+  background-image: url('#{$IMG_DIR}/index-header/notebook.jpg');
   background-repeat: no-repeat;
   min-height: 100vh;
   background-size: auto 80%;
@@ -34,6 +34,7 @@
   width: 100px;
   height: 100px;
   background-color: $teal;
+  border-radius: 50%;
   cursor: pointer;
   &:hover {
     opacity: 0.5;
