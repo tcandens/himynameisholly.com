@@ -78,6 +78,10 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("site"))
     .pipe($.size({ title: "xml & txt" }))
 });
+gulp.task("htaccess", function() {
+  return gulp.src("serve/.htaccess")
+    .pipe(gulp.dest("site"))
+});
 
 gulp.task("concat", function() {
   return gulp.src("serve/assets/javascript/**/*.js")
@@ -174,5 +178,5 @@ gulp.task("build", ["jekyll:prod", "styles"], function () {});
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "images", "fonts");
+  gulp.start("html", "copy", "htaccess", "images", "fonts");
 });

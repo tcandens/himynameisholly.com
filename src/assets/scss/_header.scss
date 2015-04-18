@@ -1,7 +1,6 @@
 /* Header / Hero Styles */
 .header {
   position: relative;
-  // min-height: 100vh; // Portrait tablet looking stupid
   width: 100%;
   padding-top: 70px;
   overflow: auto;
@@ -9,7 +8,7 @@
 .index-header {
   background-image: url('#{$IMG_DIR}/index-header/notebook.jpg');
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
   background-size: auto 80%;
   background-position: center 100px;
   overflow: hidden;

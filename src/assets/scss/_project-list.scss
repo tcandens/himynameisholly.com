@@ -13,23 +13,11 @@
   float: left;
   margin-bottom: 5em;
   transition: transform 300ms ease-out;
-  // &:nth-child(n):hover {
-  //   transform: translate3d(0,0,0) rotate(-5deg);
-  // }
-  // &:nth-child(2n):hover {
-  //   transform: translate3d(0,0,0) rotate(5deg);
-  // }
-  &:hover {
-    animation-name: bounce;
-    transform-origin: center bottom;
-    animation-duration: 700ms;
+  &:nth-child(n):hover {
+    transform: translate3d(0,0,0) rotate(-5deg);
   }
-  @include mediaquery('max-width: 800px') {
-    &:hover {
-      animation: none;
-      transform: rotate(5deg);
-      transform-origin: center center;
-    }
+  &:nth-child(2n):hover {
+    transform: translate3d(0,0,0) rotate(5deg);
   }
 }
 .project-list-link {
@@ -112,9 +100,4 @@
   90% {
     transform: translate3d(0,-4px,0);
   }
-}
-
-.bounce {
-  animation-name: bounce;
-  transform-origin: center bottom;
 }
