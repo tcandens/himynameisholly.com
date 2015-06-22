@@ -14,7 +14,7 @@ title: Home
   </aside>
   <ul id="project-list" class="project-list">
     {% for post in site.posts %}
-    <li class="project-list-item" data-category="{% for cat in post.categories %}{{ cat }}{% endfor %}"><a class="project-list-link" href="{{ post.url | prepend: site.url }}">
+    <li class="project-list-item" data-category="{% for cat in post.categories %}{{ cat }}{% endfor %}"><a class="project-list-link" href="{{ post.url }}">
         <h1 class="project-list-title hidden">{{ post.title }}</h1>
         <img src="{{ site.url }}/assets/images/thumbnails/{{ post.shortcode }}_name.svg" alt="{{ post.title }}" class="project-list-thumbnail">
         <div class="project-list-thumbnail__hover" style="background-image:url('{{ site.url }}/assets/images/thumbnails/{{ post.shortcode }}_icon.svg')">
