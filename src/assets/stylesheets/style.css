@@ -471,10 +471,10 @@ h1, h2, h3 {
   margin-bottom: 5em;
   -webkit-transition: -webkit-transform 300ms ease-out;
           transition: transform 300ms ease-out; }
-  .project-list-item:nth-child(n):hover {
+  .project-list-item:nth-child(n):active {
     -webkit-transform: translate3d(0, 0, 0) rotate(-5deg);
             transform: translate3d(0, 0, 0) rotate(-5deg); }
-  .project-list-item:nth-child(2n):hover {
+  .project-list-item:nth-child(2n):active {
     -webkit-transform: translate3d(0, 0, 0) rotate(5deg);
             transform: translate3d(0, 0, 0) rotate(5deg); }
 
@@ -1015,8 +1015,8 @@ h1, h2, h3 {
 @-webkit-keyframes fadeinleft {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 10%, 0) scale(1.1);
-            transform: translate3d(0, 10%, 0) scale(1.1); }
+    -webkit-transform: translate3d(0, 10%, 0) scale(1);
+            transform: translate3d(0, 10%, 0) scale(1); }
 
   100% {
     opacity: 1;
@@ -1026,8 +1026,8 @@ h1, h2, h3 {
 @keyframes fadeinleft {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 10%, 0) scale(1.1);
-            transform: translate3d(0, 10%, 0) scale(1.1); }
+    -webkit-transform: translate3d(0, 10%, 0) scale(1);
+            transform: translate3d(0, 10%, 0) scale(1); }
 
   100% {
     opacity: 1;

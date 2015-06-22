@@ -3,7 +3,7 @@
 title: HiMyNameIsHolly.com
 description: Professional design portfolio of Holly Bowden
 tagline:
-url: ''
+url: ./
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src

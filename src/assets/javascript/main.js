@@ -137,7 +137,6 @@ $(function() {
       var temp2 = window.setTimeout(function() {
         $container.removeClass('sorted');
       }, 800);
-
     };
     var $list = $( projectListCache ); // New jQ object to mold
     var $mirror = $list.filter('[data-category]:not([data-catgory="' + category + '"])');

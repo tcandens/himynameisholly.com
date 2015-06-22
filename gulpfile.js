@@ -101,7 +101,7 @@ gulp.task("html", function() {
 
 
 // Task to upload your site via Rsync to your server
-gulp.task("deploy", function () {
+gulp.task("deploy", [ 'publish' ], function () {
   // Load in the variables needed for our Rsync synchronization
   var secret = require("./rsync-credentials.json");
 
