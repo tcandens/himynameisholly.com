@@ -13,11 +13,8 @@
   float: left;
   margin-bottom: 5em;
   transition: transform 300ms ease-out;
-  &:nth-child(n):active {
-    transform: translate3d(0,0,0) rotate(-5deg);
-  }
-  &:nth-child(2n):active {
-    transform: translate3d(0,0,0) rotate(5deg);
+  &:active {
+    transform: translate3d(0, 5px, 0);
   }
 }
 .project-list-link {
