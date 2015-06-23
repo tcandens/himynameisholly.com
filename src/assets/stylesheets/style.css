@@ -887,7 +887,8 @@ h1, h2, h3 {
   width: 100%;
   top: 50%;
   -webkit-transition: all 500ms ease-in-out;
-          transition: all 500ms ease-in-out; }
+          transition: all 500ms ease-in-out;
+  z-index: 4000; }
 
 .paginate-previous, .paginate-next {
   width: 12em;
@@ -895,8 +896,8 @@ h1, h2, h3 {
   padding: 0.8em;
   background: rgba(255, 255, 255, 0.6);
   text-align: center;
-  border: 2px solid #93c3cf;
-  color: #93c3cf;
+  border: 2px solid #343434;
+  color: #343434;
   font: 1em/1 'futura-pt', sans-serif; }
 
 .paginate-previous {
@@ -922,6 +923,12 @@ h1, h2, h3 {
 .paginate-hidden .paginate-next {
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0); }
+
+@media (max-width: 800px) {
+  .paginate-container {
+    top: 70%; }
+  .paginate-previous, .paginate-next {
+    width: 8em; } }
 
 /* MEDIAQUERIES */
 /* Mobile Only - Very Small Screens */
