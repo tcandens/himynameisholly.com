@@ -71,7 +71,8 @@
     width: 100%;
     height: 40px;
     span {
-      font-size: 60px;
+      font-size: 59px;
+      line-height: 0.7;
     }
   }
   .project-list {
@@ -168,5 +169,11 @@
   }
   .adjective {
     font-size: 2.6em;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 800px) {
+  .nav-list {
+    font-size: 0.5em;
   }
 }
