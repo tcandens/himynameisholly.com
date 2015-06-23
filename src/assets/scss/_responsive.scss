@@ -161,6 +161,9 @@
   .header {
     min-height: 90vh;
   }
+  .index-header-shuffle {
+    margin-left: 14em;
+  }
 }
 
 @include mediaquery('min-width: 1400px') {

@@ -13,7 +13,6 @@ description: "Brandon and Alyssa are a young couple from Sioux Falls, South Dako
 <img data-sr src="assets/images/projects/ww/03.jpg" />
 <img data-sr src="assets/images/projects/ww/04.jpg" />
 <img data-sr src="assets/images/projects/ww/05.jpg" />
-<img data-sr src="assets/images/projects/ww/06.jpg" />
 <img data-sr src="assets/images/projects/ww/07.jpg" />
 <img data-sr src="assets/images/projects/ww/08.jpg" />
 <img data-sr src="assets/images/projects/ww/09.jpg" />

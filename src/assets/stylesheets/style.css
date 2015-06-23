@@ -171,7 +171,7 @@ h1, h2, h3 {
   height: 80px;
   background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid #e0dfdb;
-  z-index: 2000;
+  z-index: 4000;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-transition: all 400ms ease-in;
@@ -300,7 +300,7 @@ h1, h2, h3 {
   right: 0;
   padding-top: 120px;
   background: rgba(147, 195, 207, 0.8);
-  z-index: 2000;
+  z-index: 4000;
   -webkit-transform: translate3d(0, calc(-100% - 70px), 0);
           transform: translate3d(0, calc(-100% - 70px), 0);
   -webkit-transition: all 600ms ease;
@@ -381,7 +381,7 @@ h1, h2, h3 {
 
 .index-header-shuffle {
   position: absolute;
-  top: 0;
+  top: -1em;
   left: 50%;
   margin-left: 11em;
   width: 3em;
@@ -752,7 +752,7 @@ h1, h2, h3 {
   width: 100%;
   height: auto;
   background: #f5cdd8;
-  z-index: 2000; }
+  z-index: 4000; }
 
 .footer-back {
   display: block;
@@ -894,7 +894,7 @@ h1, h2, h3 {
             transition: opacity 400ms ease; }
   .nav-button {
     display: block;
-    z-index: 2000; }
+    z-index: 4000; }
   .nav-list {
     position: absolute;
     top: 0;
@@ -1000,7 +1000,9 @@ h1, h2, h3 {
 
 @media (min-width: 1279px) {
   .header {
-    min-height: 90vh; } }
+    min-height: 90vh; }
+  .index-header-shuffle {
+    margin-left: 14em; } }
 
 @media (min-width: 1400px) {
   .f-1-5 {
@@ -1013,37 +1015,63 @@ h1, h2, h3 {
     font-size: 0.5em; } }
 
 .scene .scene_element {
-  -webkit-animation-duration: 400ms;
-          animation-duration: 400ms;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.scene .scene_element--fadeinLeft {
-  -webkit-animation-name: fadeinleft;
-          animation-name: fadeinleft; }
+.scene .scene_element--fadeUp {
+  -webkit-animation-name: fadeinUp;
+          animation-name: fadeinUp; }
+
+.scene .scene_element--fadeUpFooter {
+  -webkit-animation-name: fadeinFooter;
+          animation-name: fadeinFooter; }
 
 .scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
           animation-direction: alternate-reverse; }
 
-@-webkit-keyframes fadeinleft {
+@-webkit-keyframes fadeinUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 10%, 0) scale(1);
-            transform: translate3d(0, 10%, 0) scale(1); }
+    -webkit-transform: translate3d(0, 10em, 0) scale(1);
+            transform: translate3d(0, 10em, 0) scale(1); }
 
   100% {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0) scale(1);
             transform: translate3d(0, 0, 0) scale(1); } }
 
-@keyframes fadeinleft {
+@keyframes fadeinUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 10%, 0) scale(1);
-            transform: translate3d(0, 10%, 0) scale(1); }
+    -webkit-transform: translate3d(0, 10em, 0) scale(1);
+            transform: translate3d(0, 10em, 0) scale(1); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1); } }
+
+@-webkit-keyframes fadeinFooter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10em, 0) scale(1);
+            transform: translate3d(0, 10em, 0) scale(1); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1); } }
+
+@keyframes fadeinFooter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10em, 0) scale(1);
+            transform: translate3d(0, 10em, 0) scale(1); }
 
   100% {
     opacity: 1;

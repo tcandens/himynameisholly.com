@@ -1,21 +1,35 @@
 .scene .scene_element {
-  animation-duration: 400ms;
+  animation-duration: 600ms;
   transition-timing-function: ease;
   animation-fill-mode: both;
 }
 
-.scene .scene_element--fadeinLeft {
-  animation-name: fadeinleft;
+.scene .scene_element--fadeUp {
+  animation-name: fadeinUp;
+}
+
+.scene .scene_element--fadeUpFooter {
+  animation-name: fadeinFooter;
 }
 
 .scene.is-exiting .scene_element {
   animation-direction: alternate-reverse;
 }
 
-@keyframes fadeinleft {
+@keyframes fadeinUp {
   0% {
     opacity: 0;
-    transform: translate3d(0,10%,0) scale(1);
+    transform: translate3d(0,10em,0) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0) scale(1);
+  }
+}
+@keyframes fadeinFooter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,10em,0) scale(1);
   }
   100% {
     opacity: 1;
