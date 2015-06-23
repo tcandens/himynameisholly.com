@@ -104,6 +104,9 @@ h1, h2, h3 {
 .red {
   color: #de4444; }
 
+.grey {
+  color: #58595b; }
+
 .uppercase, .adjective {
   text-transform: uppercase; }
 
