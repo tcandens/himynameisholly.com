@@ -1,0 +1,13 @@
+<div class="paginate-container paginate-hidden scene_element scene_element--fadeUp">
+  {% if page.previous %}
+    <a class="paginate-previous" href="{{ page.previous.url }}">&lt;&nbsp;{{ page.previous.title }}</a>
+  {% else %}
+    <a class="paginate-previous" href="{{ site.posts[0].url }}">&lt;&nbsp;{{ site.posts[0].title }}</a>
+  {% endif %}
+  {% if page.next %}
+    <a class="paginate-next" href="{{ page.next.url }}">{{ page.next.title }}&nbsp;&gt;</a>
+  {% else %}
+    {% assign size = site.posts | size | minus: 1 %}
+    <a class="paginate-next" href="{{ site.posts[size].url }}">{{ site.posts[size].title }}&nbsp;&gt;</a>
+  {% endif %}
+</div>

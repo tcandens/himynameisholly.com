@@ -882,6 +882,47 @@ h1, h2, h3 {
 .post-do .project-logo:before, .post-do .project-logo:after {
   background-color: #6e6f2e; }
 
+.paginate-container {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  -webkit-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out; }
+
+.paginate-previous, .paginate-next {
+  width: 12em;
+  min-height: 2em;
+  padding: 0.8em;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  border: 2px solid #93c3cf;
+  color: #93c3cf;
+  font: 1em/1 'futura-pt', sans-serif; }
+
+.paginate-previous {
+  position: absolute;
+  left: 0;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  -webkit-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out; }
+
+.paginate-next {
+  position: absolute;
+  right: 0;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  -webkit-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out; }
+
+.paginate-hidden .paginate-previous {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0); }
+
+.paginate-hidden .paginate-next {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0); }
+
 /* MEDIAQUERIES */
 /* Mobile Only - Very Small Screens */
 @media (max-width: 800px) {

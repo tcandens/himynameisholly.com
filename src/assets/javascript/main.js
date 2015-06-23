@@ -209,6 +209,20 @@ $(function() {
   };
   shuffleAttachListener();
 
+  var revealPaginate = function() {
+    var scroll = $( window ).scrollTop();
+    var target = $( document ).innerHeight() - $( window ).innerHeight()*2.5;
+    if ( scroll >= target ) {
+      $('.paginate-container').removeClass('paginate-hidden');
+    } else if ( scroll < target ) {
+      $('.paginate-container').addClass('paginate-hidden');
+    }
+    var timeout = setTimeout(function() {
+      revealPaginate();
+    }, 500)
+  }
+  revealPaginate();
+
   // SmoothState.js
   var content = $('#content').smoothState({
         prefetch: true,
@@ -230,6 +244,7 @@ $(function() {
             shuffleAttachListener();
             filterAttachListeners();
             headroomInit();
+            revealPaginate();
             $('.fittext').fitText();
             lockHeight( $('.fix-height') );
             fullHeight( $('.index-header') );
