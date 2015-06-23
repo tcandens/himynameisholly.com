@@ -51,16 +51,16 @@ $(function() {
 
   // Helper function to deal with mobile discrepencies
   var _scrollWindowTo = function( val, animate ) {
-    var method;
+    var $method;
     if ( navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-      method = 'body';
+      $method = $( 'html body' );
     } else {
-      method = 'html';
+      $method = $( 'html' );
     }
     if ( animate ) {
-      $( method ).animate('scrollTop', val );
+      $method.animate('scrollTop', val );
     } else {
-      $( method ).scrollTop( val );
+      $method.scrollTop( val );
     }
   }
 
@@ -113,6 +113,15 @@ $(function() {
     });
   }
   lockHeight( $('.fix-height') );
+
+  var fullHeight = function( $items ) {
+    $items.each(function( i ) {
+      $( this ).css({
+        height: $( window ).height()
+      });
+    });
+  }
+  fullHeight( $('.index-header') );
 
 
   // PROJECT FILTER
@@ -214,6 +223,7 @@ $(function() {
           render: function (url, $container) {
             content.toggleAnimationClass('is-exiting');
             var scrolltotop = window.setTimeout(function() {
+              console.log( 'Back to top' );
               // $('html, body').scrollTop(0);
               _scrollWindowTo( 0 );
             }, 400)
@@ -231,4 +241,4 @@ $(function() {
         }
       }).data('smoothState');
 
-})();
+}());

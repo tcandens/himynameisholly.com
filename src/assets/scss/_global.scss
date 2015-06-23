@@ -11,6 +11,9 @@ html, body {
   background-size: contain;
   z-index: $z-logo;
 }
+#content {
+  // height: 100%;
+}
 .main {
   width: 100%;
   min-height: 100%;

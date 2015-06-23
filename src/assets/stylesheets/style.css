@@ -354,6 +354,7 @@ h1, h2, h3 {
 .header {
   position: relative;
   width: 100%;
+  height: 100%;
   padding-top: 70px;
   overflow: auto; }
 
@@ -382,16 +383,20 @@ h1, h2, h3 {
 .index-header-shuffle {
   position: absolute;
   top: 0;
-  left: 66%;
-  width: 100px;
+  left: 50%;
+  margin-left: 10em;
+  width: 80px;
   height: 100px;
-  background-color: #356988;
-  border-radius: 50%;
-  cursor: pointer; }
-  .index-header-shuffle:hover {
-    opacity: 0.5; }
+  background-image: url('../images/shuffle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
   .index-header-shuffle:active {
-    background-color: #de4444; }
+    -webkit-transform: translate3d(0, 2px, 0) rotate(0deg);
+            transform: translate3d(0, 2px, 0) rotate(0deg); }
 
 .index-header-copy-adjectives {
   margin-top: 10px;
