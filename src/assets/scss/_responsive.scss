@@ -54,7 +54,6 @@
       transform: translate3d(0,-100%,0);
     }
   }
-
   .social-icons {
     display: block;
   }
@@ -129,7 +128,12 @@
     display: none;
     visibility: hidden;
   }
+  .index-header-copy-xaxis {
+    font-size: 0.8em;
+  }
+  .index-header-copy-adjectives .adjective {
 
+  }
 }
 
 @include mediaquery('max-width: 400px') {
@@ -139,6 +143,16 @@
   .project-list-link {
     width: 300px;
     height: 300px;
+  }
+}
+
+@include mediaquery('min-width: 800px) and (max-width: 1200px') {
+  .project-list-item {
+    width: 33%;
+  }
+  .project-list-link {
+    width: 200px;
+    height: 200px;
   }
 }
 

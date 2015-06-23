@@ -21,9 +21,10 @@
 }
 .index-header-copy-xaxis {
   position: relative;
-  width: 100%;
+  // max-width: 24em;
   margin: auto;
-  margin-left: 30px; // Moves text away from pen in header figure
+  padding-left: 30px;
+  // margin-left: 30px; // Moves text away from pen in header figure
   text-align: center;
   text-shadow: 1px 1px 0 white;
 }
@@ -31,16 +32,16 @@
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: 10em;
-  width: 80px;
-  height: 100px;
+  margin-left: 11em;
+  width: 3em;
+  height: 6em;
   background-image: url('#{$IMG_DIR}/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  transform: rotate(0deg);
+  transform: rotate(-5deg);
   &:active {
-    transform: translate3d(0, 2px, 0) rotate(0deg);
+    transform: translate3d(0, 2px, 0) rotate(-5deg);
   }
 }
 .index-header-copy-adjectives {
@@ -50,10 +51,10 @@
 .index-header-copy-adjectives .adjective {
   display: inline-block;
   &:nth-of-type(1) {
-    transform: translateX(-10px) rotate(-10deg);
+    transform: translateX(-10px) rotate(-5deg);
   }
   &:nth-of-type(2) {
-    transform: translateX(10px) rotate(5deg);
+    transform: translateX(0) rotate(5deg);
   }
 }
 @keyframes shuffleOut {
@@ -62,14 +63,14 @@
   }
   100% {
     opacity: 0;
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
 }
 
 @keyframes shuffleIn {
   0% {
     opacity: 0;
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   100% {
     opacity: 1;
