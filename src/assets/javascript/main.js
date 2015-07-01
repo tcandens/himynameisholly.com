@@ -51,17 +51,7 @@ $(function() {
 
   // Helper function to deal with mobile discrepencies
   var _scrollWindowTo = function( val, animate ) {
-    var $method;
-    if ( navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-      $method = $( 'body' );
-    } else {
-      $method = $( 'html' );
-    }
-    if ( animate ) {
-      $method.animate('scrollTop', val );
-    } else {
-      $method.scrollTop( val );
-    }
+    $(document).scrollTop( val );
   }
 
   var headroomInit = function() {
@@ -232,8 +222,6 @@ $(function() {
           render: function (url, $container) {
             content.toggleAnimationClass('is-exiting');
             var scrolltotop = window.setTimeout(function() {
-              console.log( 'Back to top' );
-              // $('html, body').scrollTop(0);
               _scrollWindowTo( 0 );
             }, 400)
           }
