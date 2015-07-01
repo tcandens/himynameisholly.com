@@ -7,8 +7,6 @@
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  // background-image: url('#{$IMG_DIR}/projects/mos/icon.png');
-  // background-size: contain; // Raster images looking fuzzy
   background-repeat: no-repeat;
   background-position: 50% 50%;
   &:before, &:after {
@@ -18,7 +16,6 @@
     top: 54%;
     width: 100%;
     height: 2px;
-    // background-color: $red;
   }
   &:before {
     left: -110%;
@@ -107,6 +104,17 @@
 }
 .post-do {
   $color: #6e6f2e;
+  .project-title {
+    color: $color;
+  }
+  .project-logo {
+    &:before, &:after {
+      background-color: $color;
+    }
+  }
+}
+.post-zulily {
+  $color: rgba(200,200,200,1);
   .project-title {
     color: $color;
   }

@@ -387,7 +387,7 @@ h1, h2, h3 {
 .index-header-shuffle {
   position: absolute;
   top: -1em;
-  left: 50%;
+  left: 53%;
   margin-left: 11em;
   width: 3em;
   height: 6em;
@@ -884,6 +884,11 @@ h1, h2, h3 {
 .post-do .project-logo:before, .post-do .project-logo:after {
   background-color: #6e6f2e; }
 
+.post-zulily .project-title {
+  color: #c8c8c8; }
+.post-zulily .project-logo:before, .post-zulily .project-logo:after {
+  background-color: #c8c8c8; }
+
 .paginate-container {
   position: fixed;
   width: 100%;
@@ -1035,7 +1040,15 @@ h1, h2, h3 {
     display: none;
     visibility: hidden; }
   .index-header-copy-xaxis {
-    font-size: 0.8em; } }
+    font-size: 0.8em; }
+  .project-logo:before, .project-logo:after {
+    width: 50%; }
+  .project-logo:before {
+    left: -50%; }
+  .project-logo:after {
+    left: 100%; }
+  .index-header-shuffle {
+    left: 50%; } }
 
 @media (max-width: 400px) {
   .project-list-item {

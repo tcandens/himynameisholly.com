@@ -132,8 +132,19 @@
   .index-header-copy-xaxis {
     font-size: 0.8em;
   }
-  .index-header-copy-adjectives .adjective {
 
+  .project-logo:before, .project-logo:after {
+    width: 50%;
+  }
+  .project-logo:before {
+    left: -50%;
+  }
+  .project-logo:after {
+    left: 100%;
+  }
+
+  .index-header-shuffle {
+    left: 50%;
   }
 }
 
