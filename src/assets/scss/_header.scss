@@ -30,18 +30,18 @@
 }
 .index-header-shuffle {
   position: absolute;
-  top: -1em;
+  top: -80px;
   left: 53%;
-  margin-left: 11em;
-  width: 3em;
-  height: 6em;
+  margin-left: 150px;
+  width: 2em;
+  height: 4em;
   background-image: url('#{$IMG_DIR}/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  transform: rotate(-5deg);
+  transform: rotate(-10deg);
   &:active {
-    transform: translate3d(0, 2px, 0) rotate(-5deg);
+    transform: translate3d(0, 2px, 0) rotate(-10deg);
   }
 }
 .index-header-copy-adjectives {

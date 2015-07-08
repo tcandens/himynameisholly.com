@@ -391,21 +391,21 @@ h1, h2, h3 {
 
 .index-header-shuffle {
   position: absolute;
-  top: -1em;
+  top: -80px;
   left: 53%;
-  margin-left: 11em;
-  width: 3em;
-  height: 6em;
+  margin-left: 150px;
+  width: 2em;
+  height: 4em;
   background-image: url('../images/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  -webkit-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg); }
   .index-header-shuffle:active {
-    -webkit-transform: translate3d(0, 2px, 0) rotate(-5deg);
-            transform: translate3d(0, 2px, 0) rotate(-5deg); }
+    -webkit-transform: translate3d(0, 2px, 0) rotate(-10deg);
+            transform: translate3d(0, 2px, 0) rotate(-10deg); }
 
 .index-header-copy-adjectives {
   margin-top: 10px;
@@ -631,6 +631,7 @@ h1, h2, h3 {
   text-align: center;
   height: 65px;
   cursor: pointer;
+  overflow: hidden;
   -webkit-transition: background-color 200ms ease;
           transition: background-color 200ms ease; }
   .filter-list-category span {
@@ -1045,7 +1046,7 @@ h1, h2, h3 {
     display: none;
     visibility: hidden; }
   .index-header-copy-xaxis {
-    font-size: 0.8em; }
+    font-size: 1em; }
   .project-logo:before, .project-logo:after {
     width: 50%; }
   .project-logo:before {

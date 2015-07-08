@@ -16,6 +16,7 @@
   text-align: center;
   height: 65px;
   cursor: pointer;
+  overflow: hidden;
   transition: background-color 200ms ease;
   span {
     font: 100px/0.65 $headerfont;
