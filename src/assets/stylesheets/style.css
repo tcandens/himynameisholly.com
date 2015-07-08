@@ -369,31 +369,34 @@ h1, h2, h3 {
   overflow: auto; }
 
 .index-header {
-  background-image: url('../images/index-header/notebook.jpg');
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: auto 80%;
-  background-position: center 100px;
+  max-height: 100vh;
+  margin: 0 auto;
   overflow: hidden; }
 
-.index-header-copy-yaxis {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 80%; }
+.index-header-image {
+  margin-top: 2%;
+  margin-left: 50%;
+  display: block;
+  max-height: 90%;
+  max-width: none;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0); }
 
-.index-header-copy-xaxis {
+.header-text-container {
   position: relative;
-  margin: auto;
-  padding-left: 30px;
-  text-align: center;
-  text-shadow: 1px 1px 0 white; }
+  top: -19vh;
+  margin: 0 auto;
+  max-width: 80%;
+  text-align: center; }
+
+.slogan {
+  font-size: 3vh;
+  white-space: pre; }
 
 .index-header-shuffle {
   position: absolute;
-  top: -1em;
-  left: 53%;
-  margin-left: 11em;
+  top: 0;
+  right: 0;
   width: 3em;
   height: 6em;
   background-image: url('../images/shuffle.png');
@@ -630,6 +633,7 @@ h1, h2, h3 {
   width: 33.333%;
   text-align: center;
   height: 65px;
+  overflow: hidden;
   cursor: pointer;
   -webkit-transition: background-color 200ms ease;
           transition: background-color 200ms ease; }
@@ -1051,9 +1055,7 @@ h1, h2, h3 {
   .project-logo:before {
     left: -50%; }
   .project-logo:after {
-    left: 100%; }
-  .index-header-shuffle {
-    left: 50%; } }
+    left: 100%; } }
 
 @media (max-width: 400px) {
   .project-list-item {
@@ -1071,9 +1073,7 @@ h1, h2, h3 {
 
 @media (min-width: 1279px) {
   .header {
-    min-height: 90vh; }
-  .index-header-shuffle {
-    margin-left: 14em; } }
+    min-height: 90vh; } }
 
 @media (min-width: 1400px) {
   .f-1-5 {

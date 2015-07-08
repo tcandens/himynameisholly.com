@@ -106,7 +106,7 @@ $(function() {
       });
     });
   }
-  fullHeight( $('.index-header') );
+  // fullHeight( $('.index-header') );
 
 
   // PROJECT FILTER
@@ -233,7 +233,6 @@ $(function() {
             filterAttachListeners();
             headroomInit();
             revealPaginate();
-            $('.fittext').fitText();
             lockHeight( $('.fix-height') );
             fullHeight( $('.index-header') );
           })
