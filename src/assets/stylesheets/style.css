@@ -128,6 +128,7 @@ h1, h2, h3 {
   visibility: visible; }
 
 .loading-overlay {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -152,21 +153,25 @@ h1, h2, h3 {
 
 @-webkit-keyframes fade {
   0% {
+    display: block;
     opacity: 1;
     visibility: visible; }
 
   100% {
     display: none;
-    opacity: 0; } }
+    opacity: 0;
+    visibility: hidden; } }
 
 @keyframes fade {
   0% {
+    display: block;
     opacity: 1;
     visibility: visible; }
 
   100% {
     display: none;
-    opacity: 0; } }
+    opacity: 0;
+    visibility: hidden; } }
 
 .nav {
   position: fixed;
@@ -885,9 +890,9 @@ h1, h2, h3 {
   background-color: #6e6f2e; }
 
 .post-zulily .project-title {
-  color: #c8c8c8; }
+  color: inherit; }
 .post-zulily .project-logo:before, .post-zulily .project-logo:after {
-  background-color: #c8c8c8; }
+  background-color: inherit; }
 
 .paginate-container {
   position: fixed;
