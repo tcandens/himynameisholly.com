@@ -7,7 +7,7 @@
   overflow: auto;
 }
 .index-header {
-  max-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -21,21 +21,21 @@
 }
 .header-text-container {
   position: relative;
-  top: -19vh;
+  top: -5em;
   margin: 0 auto;
   max-width: 80%;
   text-align: center;
 }
 .slogan {
-  font-size: 3vh;
+  font-size: 1.3rem;
   white-space: pre;
 }
 .index-header-shuffle {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 3em;
-  height: 6em;
+  top: -4rem;
+  right: -2rem;
+  width: 2em;
+  height: 5em;
   background-image: url('#{$IMG_DIR}/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
