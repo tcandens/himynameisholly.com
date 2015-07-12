@@ -3,14 +3,14 @@
 
 # TEAM
 
-     -- <role> -- @
+    Designer: Holly Bowden
+    Contact: bowden.holly@gmail.com
 
-# THANKS
-
-    <name>
+    Developer: Joseph Thies
+    Contact: joey.thies@gmail.com
+    Link: http://www.joeythies.com
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3, JavaScript
-    Jekyll, Lanyon/Poole, HTML5 Boilerplate
-    Yeoman, Jekyllized
+    Jekyll, GulpJS, Sass,
