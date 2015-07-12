@@ -90,10 +90,11 @@ $(function() {
   };
   navButtons();
 
+  // Hard set height when using viewport units on mobile
   var lockHeight = function( $items ) {
     $items.each(function( i ) {
       $(this).css({
-        height: $(this).height()
+        height: $(this).outerHeight()
       });
     });
   }
@@ -106,7 +107,7 @@ $(function() {
       });
     });
   }
-  fullHeight( $('.index-header') );
+  // fullHeight( $('.index-header') );
 
 
   // PROJECT FILTER
@@ -167,7 +168,6 @@ $(function() {
     ["Ravenclaw"],
     ["Simlish", "translator"],
     ["Star Trek", "enthusiast"],
-    ["Graphics", "Coordinator"],
     ["Problem", "Solver"],
     ["Logic", "lover"],
     ["Dog", "Person"]
@@ -186,6 +186,15 @@ $(function() {
     $('.index-header-copy-adjectives').html(string);
   };
   shuffle();
+
+  var shufflePeriod = setInterval(function() {
+    var $adjs = $('.adjective');
+    $adjs.removeClass('shuffleIn');
+    $adjs.addClass('shuffleOut');
+    var timeout2 = window.setTimeout(function() {
+      shuffle();
+    }, 400);
+  }, 5000);
 
   var shuffleAttachListener = function() {
     $('.index-header-shuffle').on('click', function() {
