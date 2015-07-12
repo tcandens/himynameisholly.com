@@ -190,4 +190,39 @@
   .nav-list {
     font-size: 0.5em;
   }
+  .index-header-image {
+    margin-top: 6%;
+  }
+  .header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    top: -100%;
+  }
+  .index-header-copy-adjectives {
+    position: relative;
+    top: -10%;
+    margin-top: 0;
+  }
+  .adjective {
+    font-size: 1.5em;
+  }
+  .index-header-shuffle {
+    position: absolute;
+    height: 4.5rem;
+    top: 70%;
+    right: 50%;
+  }
+  .index-header-copy-adjectives .adjective {
+    &:nth-of-type(1) {
+      transform: translateX(0) rotate(0);
+    }
+    &:nth-of-type(2) {
+      transform: translateX(0.5em) rotate(0);
+    }
+  }
+
 }

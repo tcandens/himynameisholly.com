@@ -167,7 +167,6 @@ $(function() {
     ["Ravenclaw"],
     ["Simlish", "translator"],
     ["Star Trek", "enthusiast"],
-    ["Graphics", "Coordinator"],
     ["Problem", "Solver"],
     ["Logic", "lover"],
     ["Dog", "Person"]
@@ -186,6 +185,15 @@ $(function() {
     $('.index-header-copy-adjectives').html(string);
   };
   shuffle();
+
+  var shufflePeriod = setInterval(function() {
+    var $adjs = $('.adjective');
+    $adjs.removeClass('shuffleIn');
+    $adjs.addClass('shuffleOut');
+    var timeout2 = window.setTimeout(function() {
+      shuffle();
+    }, 400);
+  }, 5000);
 
   var shuffleAttachListener = function() {
     $('.index-header-shuffle').on('click', function() {
