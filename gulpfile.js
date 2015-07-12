@@ -15,6 +15,7 @@ var merge = require("merge-stream");
 var reload = browserSync.reload;
 // And define a variable that BrowserSync uses in it"s function
 var bs;
+var sprity = require('sprity');
 
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
@@ -66,6 +67,18 @@ gulp.task("images", function () {
     .pipe(gulp.dest("site/assets/images"))
     .pipe($.size({title: "images"}));
 });
+
+gulp.task('sprites', function() {
+  return sprity.src({
+    src: './src/assets/images/projects/**/icon.png',
+    style: 'sprite.scss',
+    out: './src/assets/images/icons/',
+    opacity: 100,
+    prefix: 'sprite',
+    cssPath: '../images/'
+  })
+    .pipe($.if('*.png', gulp.dest('./src/assets/images/'), gulp.dest('./src/assets/scss/')))
+})
 
 // Copy over fonts to the "site" directory
 gulp.task("fonts", function () {
@@ -138,7 +151,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["styles", "sprites", "jekyll:dev"], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",
@@ -176,7 +189,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 });
 
 // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod", "styles"], function () {});
+gulp.task("build", ["jekyll:prod", "styles", "sprites"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"

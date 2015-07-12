@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "description": "Yeoman workflow for himynameisholly com",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-if": "^1.2.5"
+  },
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "del": "^1.1.1",
@@ -31,7 +33,9 @@
     "gulp-usemin": "^0.3.11",
     "gulp-useref": "^1.0.2",
     "jshint-stylish": "^1.0.0",
-    "merge-stream": "^0.1.6"
+    "merge-stream": "^0.1.6",
+    "sprity": "^1.0.6",
+    "sprity-sass": "^1.0.4"
   },
   "engines": {
     "node": ">0.10.0"

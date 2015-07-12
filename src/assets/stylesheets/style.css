@@ -59,6 +59,44 @@ html, body {
 img {
   max-width: 100%; }
 
+.sprite {
+  background-image: url("../images/sprite.png"); }
+
+.sprite-mos-icon {
+  background-position: 0px 0px;
+  width: 86px;
+  height: 51px; }
+
+.sprite-sixohfive-icon {
+  background-position: 0px -51px;
+  width: 88px;
+  height: 58px; }
+
+.sprite-zulily-icon {
+  background-position: 0px -109px;
+  width: 68px;
+  height: 65px; }
+
+.sprite-ww-icon {
+  background-position: 0px -174px;
+  width: 58px;
+  height: 84px; }
+
+.sprite-do-icon {
+  background-position: 0px -258px;
+  width: 68px;
+  height: 85px; }
+
+.sprite-sqtm-icon {
+  background-position: 0px -343px;
+  width: 83px;
+  height: 101px; }
+
+.sprite-julep-icon {
+  background-position: 0px -444px;
+  width: 31px;
+  height: 108px; }
+
 /* Set font-family for Mount: "da-font.com/mount"; created with typesquirrel.com */
 @font-face {
   font-family: 'mount_italic';
@@ -826,10 +864,7 @@ h1, h2, h3 {
 
 .project-logo {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
+  background-repeat: no-repeat; }
   .project-logo:before, .project-logo:after {
     content: '';
     display: block;
@@ -863,9 +898,9 @@ h1, h2, h3 {
 .post-container img {
   width: 100%; }
 
-.post-605 .project-title {
+.post-sixohfive .project-title {
   color: #b4d361; }
-.post-605 .project-logo:before, .post-605 .project-logo:after {
+.post-sixohfive .project-logo:before, .post-sixohfive .project-logo:after {
   background-color: #b4d361; }
 
 .post-ww .project-title {
