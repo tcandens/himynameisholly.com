@@ -1114,8 +1114,6 @@ h1, h2, h3 {
     min-height: 90vh; } }
 
 @media (min-width: 1400px) {
-  .f-1-5 {
-    font-size: 1.5em; }
   .adjective {
     font-size: 2.6em; } }
 
