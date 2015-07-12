@@ -377,14 +377,14 @@ h1, h2, h3 {
   margin-top: 2%;
   margin-left: 50%;
   display: block;
-  max-height: 90%;
+  height: 90%;
   max-width: none;
   -webkit-transform: translate3d(-50%, 0, 0);
           transform: translate3d(-50%, 0, 0); }
 
 .header-text-container {
   position: relative;
-  top: -5em;
+  top: -20%;
   margin: 0 auto;
   max-width: 80%;
   text-align: center; }
@@ -396,19 +396,18 @@ h1, h2, h3 {
 .index-header-shuffle {
   position: absolute;
   top: -4rem;
-  right: -2rem;
+  right: 50%;
   width: 2em;
-  height: 5em;
+  height: 4em;
   background-image: url('../images/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  -webkit-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
+  -webkit-transform: translate3d(13em, 0, 0) rotate(-7deg);
+          transform: translate3d(13em, 0, 0) rotate(-7deg); }
   .index-header-shuffle:active {
-    -webkit-transform: translate3d(0, 2px, 0) rotate(-5deg);
-            transform: translate3d(0, 2px, 0) rotate(-5deg); }
+    -webkit-transform: translate3d(13em, 2px, 0) rotate(-7deg);
+            transform: translate3d(13em, 2px, 0) rotate(-7deg); }
 
 .index-header-copy-adjectives {
   margin-top: 10px;
@@ -999,7 +998,7 @@ h1, h2, h3 {
   .social-icons {
     display: block; }
   .index-header {
-    background-position: center 80px; }
+    height: 100vh; }
   .index-header-copy-xaxis {
     margin-left: 0; }
   .project-list-filter {
@@ -1058,6 +1057,9 @@ h1, h2, h3 {
     left: 100%; } }
 
 @media (max-width: 400px) {
+  .index-header-shuffle {
+    -webkit-transform: translate3d(10em, 0, 0);
+            transform: translate3d(10em, 0, 0); }
   .project-list-item {
     width: 100%; }
   .project-list-link {
@@ -1080,6 +1082,11 @@ h1, h2, h3 {
     font-size: 1.5em; }
   .adjective {
     font-size: 2.6em; } }
+
+@media screen and (orientation: portrait) and (min-width: 520px) and (max-width: 769px) {
+  .index-header {
+    height: auto;
+    max-width: 100vh; } }
 
 @media screen and (orientation: landscape) and (max-width: 800px) {
   .nav-list {
@@ -1116,8 +1123,7 @@ h1, h2, h3 {
   .index-header-shuffle {
     position: absolute;
     height: 4.5rem;
-    top: 70%;
-    right: 50%; }
+    top: 70%; }
   .index-header-copy-adjectives .adjective:nth-of-type(1) {
     -webkit-transform: translateX(0) rotate(0);
         -ms-transform: translateX(0) rotate(0);

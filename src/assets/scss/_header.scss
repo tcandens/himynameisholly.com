@@ -15,13 +15,13 @@
   margin-top: 2%;
   margin-left: 50%;
   display: block;
-  max-height: 90%;
+  height: 90%;
   max-width: none;
   transform: translate3d(-50%, 0, 0);
 }
 .header-text-container {
   position: relative;
-  top: -5em;
+  top: -20%;
   margin: 0 auto;
   max-width: 80%;
   text-align: center;
@@ -33,16 +33,16 @@
 .index-header-shuffle {
   position: absolute;
   top: -4rem;
-  right: -2rem;
+  right: 50%;
   width: 2em;
-  height: 5em;
+  height: 4em;
   background-image: url('#{$IMG_DIR}/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  transform: rotate(-5deg);
+  transform: translate3d(13em, 0, 0) rotate(-7deg);
   &:active {
-    transform: translate3d(0, 2px, 0) rotate(-5deg);
+    transform: translate3d(13em, 2px, 0) rotate(-7deg);
   }
 }
 .index-header-copy-adjectives {

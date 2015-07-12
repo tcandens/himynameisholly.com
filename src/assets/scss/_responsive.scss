@@ -1,6 +1,7 @@
 /* MEDIAQUERIES */
 
 /* Mobile Only - Very Small Screens */
+
 @include mediaquery('max-width: 800px') {
   html {
     font-size: 80%;
@@ -58,7 +59,7 @@
     display: block;
   }
   .index-header {
-    background-position: center 80px;
+    height: 100vh;
   }
   .index-header-copy-xaxis {
     margin-left: 0;
@@ -142,13 +143,13 @@
   .project-logo:after {
     left: 100%;
   }
-
-  .index-header-shuffle {
-    // left: 50%;
-  }
 }
-
+@include mediaquery('max-width: 320px') {
+}
 @include mediaquery('max-width: 400px') {
+  .index-header-shuffle {
+    transform: translate3d(10em, 0, 0);
+  }
   .project-list-item {
     width: 100%;
   }
@@ -185,7 +186,12 @@
     font-size: 2.6em;
   }
 }
-
+@media screen and (orientation: portrait) and (min-width: 520px) and (max-width: 769px) {
+  .index-header {
+    height: auto;
+    max-width: 100vh;
+  }
+}
 @media screen and (orientation: landscape) and (max-width: 800px) {
   .nav-list {
     font-size: 0.5em;
@@ -214,7 +220,7 @@
     position: absolute;
     height: 4.5rem;
     top: 70%;
-    right: 50%;
+    // right: 20%;
   }
   .index-header-copy-adjectives .adjective {
     &:nth-of-type(1) {

@@ -90,14 +90,15 @@ $(function() {
   };
   navButtons();
 
+  // Hard set height when using viewport units on mobile
   var lockHeight = function( $items ) {
     $items.each(function( i ) {
       $(this).css({
-        height: $(this).height()
+        height: $(this).outerHeight()
       });
     });
   }
-  // lockHeight( $('.fix-height') );
+  lockHeight( $('.fix-height') );
 
   var fullHeight = function( $items ) {
     $items.each(function( i ) {
@@ -106,7 +107,7 @@ $(function() {
       });
     });
   }
-  fullHeight( $('.index-header') );
+  // fullHeight( $('.index-header') );
 
 
   // PROJECT FILTER
