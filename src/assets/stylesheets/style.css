@@ -395,34 +395,19 @@ h1, h2, h3 {
 
 .index-header-shuffle {
   position: absolute;
-<<<<<<< HEAD
-  top: -80px;
-  left: 53%;
-  margin-left: 150px;
-=======
   top: -4rem;
   right: 50%;
->>>>>>> rere-header
   width: 2em;
   height: 4em;
   background-image: url('../images/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-<<<<<<< HEAD
-  -webkit-transform: rotate(-10deg);
-      -ms-transform: rotate(-10deg);
-          transform: rotate(-10deg); }
+  -webkit-transform: translate3d(12em, 0, 0) rotate(-7deg);
+          transform: translate3d(12em, 0, 0) rotate(-7deg); }
   .index-header-shuffle:active {
-    -webkit-transform: translate3d(0, 2px, 0) rotate(-10deg);
-            transform: translate3d(0, 2px, 0) rotate(-10deg); }
-=======
-  -webkit-transform: translate3d(13em, 0, 0) rotate(-7deg);
-          transform: translate3d(13em, 0, 0) rotate(-7deg); }
-  .index-header-shuffle:active {
-    -webkit-transform: translate3d(13em, 2px, 0) rotate(-7deg);
-            transform: translate3d(13em, 2px, 0) rotate(-7deg); }
->>>>>>> rere-header
+    -webkit-transform: translate3d(12em, 2px, 0) rotate(-7deg);
+            transform: translate3d(12em, 2px, 0) rotate(-7deg); }
 
 .index-header-copy-adjectives {
   margin-top: 10px;
