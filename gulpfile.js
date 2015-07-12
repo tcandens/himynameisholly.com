@@ -59,7 +59,9 @@ gulp.task("images", function () {
       // Lossless conversion to progressive JPGs
       progressive: true,
       // Interlace GIFs for progressive rendering
-      interlaced: true
+      interlaced: true,
+      // Optimize SVGs
+      multipass: true
     }))
     .pipe(gulp.dest("site/assets/images"))
     .pipe($.size({title: "images"}));
@@ -112,6 +114,7 @@ gulp.task("deploy", [ 'publish' ], function () {
       // Find your username, hostname and destination from your rsync-credentials.json
       hostname: secret.hostname,
       username: secret.username,
+      password: secret.password,
       destination: secret.destination,
       // Incremental uploading, adds a small delay but minimizes the amount of files transferred
       incremental: true,
@@ -178,5 +181,5 @@ gulp.task("build", ["jekyll:prod", "styles"], function () {});
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "htaccess", "images", "fonts");
+  gulp.start("html", "minify", "copy", "htaccess", "styles", "images", "fonts");
 });

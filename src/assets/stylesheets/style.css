@@ -128,6 +128,7 @@ h1, h2, h3 {
   visibility: visible; }
 
 .loading-overlay {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -152,21 +153,25 @@ h1, h2, h3 {
 
 @-webkit-keyframes fade {
   0% {
+    display: block;
     opacity: 1;
     visibility: visible; }
 
   100% {
     display: none;
-    opacity: 0; } }
+    opacity: 0;
+    visibility: hidden; } }
 
 @keyframes fade {
   0% {
+    display: block;
     opacity: 1;
     visibility: visible; }
 
   100% {
     display: none;
-    opacity: 0; } }
+    opacity: 0;
+    visibility: hidden; } }
 
 .nav {
   position: fixed;
@@ -364,43 +369,60 @@ h1, h2, h3 {
   overflow: auto; }
 
 .index-header {
-  background-image: url('../images/index-header/notebook.jpg');
-  background-repeat: no-repeat;
   height: 100vh;
-  background-size: auto 80%;
-  background-position: center 100px;
+  margin: 0 auto;
   overflow: hidden; }
 
-.index-header-copy-yaxis {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 80%; }
+.index-header-image {
+  margin-top: 2%;
+  margin-left: 50%;
+  display: block;
+  height: 90%;
+  max-width: none;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0); }
 
-.index-header-copy-xaxis {
+.header-text-container {
   position: relative;
-  margin: auto;
-  padding-left: 30px;
-  text-align: center;
-  text-shadow: 1px 1px 0 white; }
+  top: -20%;
+  margin: 0 auto;
+  max-width: 80%;
+  text-align: center; }
+
+.slogan {
+  font-size: 1.3rem;
+  white-space: pre; }
 
 .index-header-shuffle {
   position: absolute;
-  top: -1em;
-  left: 50%;
-  margin-left: 11em;
-  width: 3em;
-  height: 6em;
+<<<<<<< HEAD
+  top: -80px;
+  left: 53%;
+  margin-left: 150px;
+=======
+  top: -4rem;
+  right: 50%;
+>>>>>>> rere-header
+  width: 2em;
+  height: 4em;
   background-image: url('../images/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  -webkit-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
+<<<<<<< HEAD
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg); }
   .index-header-shuffle:active {
-    -webkit-transform: translate3d(0, 2px, 0) rotate(-5deg);
-            transform: translate3d(0, 2px, 0) rotate(-5deg); }
+    -webkit-transform: translate3d(0, 2px, 0) rotate(-10deg);
+            transform: translate3d(0, 2px, 0) rotate(-10deg); }
+=======
+  -webkit-transform: translate3d(13em, 0, 0) rotate(-7deg);
+          transform: translate3d(13em, 0, 0) rotate(-7deg); }
+  .index-header-shuffle:active {
+    -webkit-transform: translate3d(13em, 2px, 0) rotate(-7deg);
+            transform: translate3d(13em, 2px, 0) rotate(-7deg); }
+>>>>>>> rere-header
 
 .index-header-copy-adjectives {
   margin-top: 10px;
@@ -625,7 +647,9 @@ h1, h2, h3 {
   width: 33.333%;
   text-align: center;
   height: 65px;
+  overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
   -webkit-transition: background-color 200ms ease;
           transition: background-color 200ms ease; }
   .filter-list-category span {
@@ -884,6 +908,11 @@ h1, h2, h3 {
 .post-do .project-logo:before, .post-do .project-logo:after {
   background-color: #6e6f2e; }
 
+.post-zulily .project-title {
+  color: inherit; }
+.post-zulily .project-logo:before, .post-zulily .project-logo:after {
+  background-color: inherit; }
+
 .paginate-container {
   position: fixed;
   width: 100%;
@@ -985,7 +1014,7 @@ h1, h2, h3 {
   .social-icons {
     display: block; }
   .index-header {
-    background-position: center 80px; }
+    height: 100vh; }
   .index-header-copy-xaxis {
     margin-left: 0; }
   .project-list-filter {
@@ -1035,9 +1064,18 @@ h1, h2, h3 {
     display: none;
     visibility: hidden; }
   .index-header-copy-xaxis {
-    font-size: 0.8em; } }
+    font-size: 1em; }
+  .project-logo:before, .project-logo:after {
+    width: 50%; }
+  .project-logo:before {
+    left: -50%; }
+  .project-logo:after {
+    left: 100%; } }
 
 @media (max-width: 400px) {
+  .index-header-shuffle {
+    -webkit-transform: translate3d(10em, 0, 0);
+            transform: translate3d(10em, 0, 0); }
   .project-list-item {
     width: 100%; }
   .project-list-link {
@@ -1053,9 +1091,7 @@ h1, h2, h3 {
 
 @media (min-width: 1279px) {
   .header {
-    min-height: 90vh; }
-  .index-header-shuffle {
-    margin-left: 14em; } }
+    min-height: 90vh; } }
 
 @media (min-width: 1400px) {
   .f-1-5 {
@@ -1063,9 +1099,55 @@ h1, h2, h3 {
   .adjective {
     font-size: 2.6em; } }
 
+@media screen and (orientation: portrait) and (min-width: 520px) and (max-width: 769px) {
+  .index-header {
+    height: auto;
+    max-width: 100vh; } }
+
 @media screen and (orientation: landscape) and (max-width: 800px) {
   .nav-list {
-    font-size: 0.5em; } }
+    font-size: 0.5em; }
+  .index-header-image {
+    margin-top: 6%; }
+  .header-text-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    height: 100%;
+    top: -100%; }
+  .index-header-copy-adjectives {
+    position: relative;
+    top: -10%;
+    margin-top: 0; }
+  .adjective {
+    font-size: 1.5em; }
+  .index-header-shuffle {
+    position: absolute;
+    height: 4.5rem;
+    top: 70%; }
+  .index-header-copy-adjectives .adjective:nth-of-type(1) {
+    -webkit-transform: translateX(0) rotate(0);
+        -ms-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0); }
+  .index-header-copy-adjectives .adjective:nth-of-type(2) {
+    -webkit-transform: translateX(0.5em) rotate(0);
+        -ms-transform: translateX(0.5em) rotate(0);
+            transform: translateX(0.5em) rotate(0); } }
 
 .scene .scene_element {
   -webkit-animation-duration: 600ms;

@@ -1,6 +1,7 @@
 /* MEDIAQUERIES */
 
 /* Mobile Only - Very Small Screens */
+
 @include mediaquery('max-width: 800px') {
   html {
     font-size: 80%;
@@ -58,7 +59,7 @@
     display: block;
   }
   .index-header {
-    background-position: center 80px;
+    height: 100vh;
   }
   .index-header-copy-xaxis {
     margin-left: 0;
@@ -130,14 +131,25 @@
     visibility: hidden;
   }
   .index-header-copy-xaxis {
-    font-size: 0.8em;
+    font-size: 1em;
   }
-  .index-header-copy-adjectives .adjective {
 
+  .project-logo:before, .project-logo:after {
+    width: 50%;
+  }
+  .project-logo:before {
+    left: -50%;
+  }
+  .project-logo:after {
+    left: 100%;
   }
 }
-
+@include mediaquery('max-width: 320px') {
+}
 @include mediaquery('max-width: 400px') {
+  .index-header-shuffle {
+    transform: translate3d(10em, 0, 0);
+  }
   .project-list-item {
     width: 100%;
   }
@@ -162,7 +174,7 @@
     min-height: 90vh;
   }
   .index-header-shuffle {
-    margin-left: 14em;
+    // margin-left: 14em;
   }
 }
 
@@ -174,9 +186,49 @@
     font-size: 2.6em;
   }
 }
-
+@media screen and (orientation: portrait) and (min-width: 520px) and (max-width: 769px) {
+  .index-header {
+    height: auto;
+    max-width: 100vh;
+  }
+}
 @media screen and (orientation: landscape) and (max-width: 800px) {
   .nav-list {
     font-size: 0.5em;
   }
+  .index-header-image {
+    margin-top: 6%;
+  }
+  .header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    top: -100%;
+  }
+  .index-header-copy-adjectives {
+    position: relative;
+    top: -10%;
+    margin-top: 0;
+  }
+  .adjective {
+    font-size: 1.5em;
+  }
+  .index-header-shuffle {
+    position: absolute;
+    height: 4.5rem;
+    top: 70%;
+    // right: 20%;
+  }
+  .index-header-copy-adjectives .adjective {
+    &:nth-of-type(1) {
+      transform: translateX(0) rotate(0);
+    }
+    &:nth-of-type(2) {
+      transform: translateX(0.5em) rotate(0);
+    }
+  }
+
 }
