@@ -125,12 +125,14 @@
 }
 .shuffleOut {
   animation: shuffleOut 400ms ease;
+  opacity: 0;
   // &:nth-of-type(2) {
   //   animation-direction: reverse;
   // }
 }
 .shuffleIn {
   animation: shuffleIn 400ms ease;
+  opacity: 100;
   // &:nth-of-type(2) {
   //   animation-direction: reverse;
   // }

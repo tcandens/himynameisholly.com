@@ -514,11 +514,13 @@ h1, h2, h3 {
 
 .shuffleOut {
   -webkit-animation: shuffleOut 400ms ease;
-          animation: shuffleOut 400ms ease; }
+          animation: shuffleOut 400ms ease;
+  opacity: 0; }
 
 .shuffleIn {
   -webkit-animation: shuffleIn 400ms ease;
-          animation: shuffleIn 400ms ease; }
+          animation: shuffleIn 400ms ease;
+  opacity: 100; }
 
 /* Project list */
 .project-list {
