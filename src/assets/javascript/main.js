@@ -207,28 +207,41 @@ $(function() {
   revealPaginate();
 
   // SmoothState.js
-  var content = $('#content').smoothState({
+  var smoothState = $('#content').smoothState({
         prefetch: true,
-        pageCacheSize: 100,
+        pageCacheSize: 3,
+        // onBefore: function( $currentTarget, $container ){
+        //   $container.addClass('is-exiting');
+        // },
         onStart: {
           duration: 400,
-          render: function (url, $container) {
-            content.toggleAnimationClass('is-exiting');
-            var scrolltotop = window.setTimeout(function() {
-              _scrollWindowTo( 0 );
-            }, 400)
+          render: function ( $container ) {
+            $container.addClass('is-exiting');
+            smoothState.restartCSSAnimations();
           }
         },
-        callback: function(url, $container, $content) {
-          $(function() {
-            navButtons();
-            filterAttachListeners();
-            headroomInit();
-            revealPaginate();
-            $('.fittext').fitText();
-            lockHeight( $('.fix-height') );
-            fullHeight( $('.index-header') );
-          })
+        onProgress: {
+          duration: 0,
+          render: function( $container ) {
+            _scrollWindowTo( 0 );
+          }
+        },
+        onReady: {
+          duration: 400,
+          render: function( $container, $newContent ) {
+            $container.removeClass('is-exiting');
+            $container.html( $newContent );
+          }
+        },
+        onAfter: function($container, $newContent) {
+          $('.fittext').fitText();
+          navButtons();
+          filterAttachListeners();
+          headroomInit();
+          revealPaginate();
+          cycleAdjectives();
+          lockHeight( $('.fix-height') );
+          fullHeight( $('.index-header') );
         }
       }).data('smoothState');
 

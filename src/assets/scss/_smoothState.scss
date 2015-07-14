@@ -12,7 +12,7 @@
   animation-name: fadeinFooter;
 }
 
-.scene.is-exiting .scene_element {
+.is-exiting .scene_element {
   animation-direction: alternate-reverse;
 }
 

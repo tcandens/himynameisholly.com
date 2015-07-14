@@ -1000,6 +1000,8 @@ h1, h2, h3 {
 /* MEDIAQUERIES */
 /* Mobile Only - Very Small Screens */
 @media (max-width: 800px) {
+  .f-5 {
+    font-size: 2em; }
   .nav {
     height: 70px; }
   .nav-logo {
@@ -1047,8 +1049,6 @@ h1, h2, h3 {
             transform: translate3d(0, -100%, 0); }
   .social-icons {
     display: block; }
-  .index-header-copy-xaxis {
-    margin-left: 0; }
   .project-list-filter {
     margin-bottom: 100px; }
   .filter-list-category {
@@ -1137,7 +1137,7 @@ h1, h2, h3 {
   -webkit-animation-name: fadeinFooter;
           animation-name: fadeinFooter; }
 
-.scene.is-exiting .scene_element {
+.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
           animation-direction: alternate-reverse; }
 

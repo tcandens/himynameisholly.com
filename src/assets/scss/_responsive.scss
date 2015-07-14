@@ -3,8 +3,8 @@
 /* Mobile Only - Very Small Screens */
 
 @include mediaquery('max-width: 800px') {
-  html {
-    // font-size: 80%;
+  .f-5 {
+    font-size: 2em;
   }
   .nav {
     height: 70px;
@@ -56,9 +56,6 @@
   }
   .social-icons {
     display: block;
-  }
-  .index-header-copy-xaxis {
-    margin-left: 0;
   }
   .project-list-filter {
     margin-bottom: 100px;
