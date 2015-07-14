@@ -109,7 +109,6 @@ $(function() {
     }, 8000)
     showAdj();
     $('.index-header-shuffle').click(function( e ) {
-      e.preventDefault();
       showAdj();
       clearInterval(cycleInterval);
       cycleInterval = setInterval(function() {
@@ -200,7 +199,10 @@ $(function() {
     }
     var timeout = setTimeout(function() {
       revealPaginate();
-    }, 500)
+    }, 500);
+    // $('.paginate-next .paginate-previous').click(function(e) {
+    //   $( this ).addClass('paginate-hidden');
+    // })
   }
   revealPaginate();
 
@@ -220,7 +222,6 @@ $(function() {
         callback: function(url, $container, $content) {
           $(function() {
             navButtons();
-            shuffleAttachListener();
             filterAttachListeners();
             headroomInit();
             revealPaginate();
