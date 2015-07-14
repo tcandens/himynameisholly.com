@@ -4,11 +4,7 @@
   margin-bottom: 100px;
 }
 .project-logo {
-  margin: 0 auto;
-  // width: 100px;
-  // height: 100px;
-  background-repeat: no-repeat;
-  // background-position: 50% 50%;
+  margin: 0 auto 1em auto;
   &:before, &:after {
     content: '';
     display: block;
@@ -35,7 +31,6 @@
   list-style: none;
   float: left;
   width: 20%;
-  // padding: 0 80px;
 }
 .project-description {
   width: 80%;

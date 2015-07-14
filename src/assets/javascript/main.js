@@ -118,25 +118,6 @@ $(function() {
   }
   cycleAdjectives();
 
-  // Hard set height when using viewport units on mobile
-  var lockHeight = function( $items ) {
-    $items.each(function( i ) {
-      $(this).css({
-        height: $(this).outerHeight()
-      });
-    });
-  }
-  lockHeight( $('.fix-height') );
-
-  var fullHeight = function( $items ) {
-    $items.each(function( i ) {
-      $( this ).css({
-        height: $( window ).height()
-      });
-    });
-  }
-  // fullHeight( $('.index-header') );
-
   // PROJECT FILTER
   var projectCategories = [
     "etc",
@@ -176,7 +157,6 @@ $(function() {
       _animate(_reset);
       $('.active').removeClass('active');
       $button.addClass('active');
-      // $('[data-category]:not([data-category=' + category + '])').detach();
       _animate(_mold);
     }
   }
@@ -200,9 +180,6 @@ $(function() {
     var timeout = setTimeout(function() {
       revealPaginate();
     }, 500);
-    // $('.paginate-next .paginate-previous').click(function(e) {
-    //   $( this ).addClass('paginate-hidden');
-    // })
   }
   revealPaginate();
 
@@ -228,17 +205,15 @@ $(function() {
           render: function( $container, $newContent ) {
             $container.removeClass('is-exiting');
             $container.html( $newContent );
+            $('.fittext').fitText();
           }
         },
         onAfter: function($container, $newContent) {
-          $('.fittext').fitText();
           navButtons();
           filterAttachListeners();
           headroomInit();
           revealPaginate();
           cycleAdjectives();
-          lockHeight( $('.fix-height') );
-          fullHeight( $('.index-header') );
         }
       }).data('smoothState');
 
