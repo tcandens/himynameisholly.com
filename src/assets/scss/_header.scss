@@ -7,55 +7,103 @@
   overflow: auto;
 }
 .index-header {
-  height: 100vh;
+  height: 440px;
   margin: 0 auto;
   overflow: hidden;
 }
 .index-header-image {
-  margin-top: 2%;
-  margin-left: 50%;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 320px;
   display: block;
-  height: 90%;
-  max-width: none;
-  transform: translate3d(-50%, 0, 0);
 }
 .header-text-container {
   position: relative;
-  top: -20%;
   margin: 0 auto;
-  max-width: 80%;
+  top: -45px;
+  max-width: 320px;
   text-align: center;
 }
 .slogan {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   white-space: pre;
 }
 .index-header-shuffle {
   position: absolute;
-  top: -4rem;
-  right: 50%;
+  top: -10px;
+  left: 40px;
   width: 2em;
-  height: 4em;
+  height: 3.2em;
   background-image: url('#{$IMG_DIR}/shuffle.png');
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
   transform: translate3d(12em, 0, 0) rotate(-7deg);
+  z-index: 2000;
   &:active {
     transform: translate3d(12em, 2px, 0) rotate(-7deg);
   }
 }
-.index-header-copy-adjectives {
-  margin-top: 10px;
-  display: inline;
-}
 .index-header-copy-adjectives .adjective {
-  display: inline-block;
+  position: absolute;
+  display: block;
+  white-space: pre;
+  font-size: 1.8rem;
+  &:only-of-type {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0) rotate(-3deg);
+  }
+  &:not(:only-of-type):nth-child(1) {
+    left: 50%;
+    transform: translate3d(-90%, 0, 0) rotate(-3deg);
+  }
+  &:not(:only-of-type):nth-child(2) {
+    right: 50%;
+    transform: translate3d(100%, 90%, 0) rotate(3deg) scale(0.8);
+  }
+}
+.index-header-copy-adjectives {
+  position: absolute;
+  margin-top: 10px;
+  display: block;
+  min-height: 20px;
+  width: 100%;
+  opacity: 0;
   &:nth-of-type(1) {
-    transform: translateX(-10px) rotate(-5deg);
+    // background-color: purple;
   }
   &:nth-of-type(2) {
-    transform: translateX(0) rotate(5deg);
+    // background-color: red;
+  }
+  &:nth-of-type(3) {
+    .adjective {
+      &:nth-child(2) {
+        transform: translate3d(60%, 90%, 0) rotate(-3deg) scale(0.8);
+      }
+    }
+  }
+  &:nth-of-type(4) {
+    .adjective {
+      &:nth-child(1) {
+        transform: translate3d(-70%, 0, 0) rotate(-3deg);
+      }
+      &:nth-child(2) {
+        transform: translate3d(60%, 90%, 0) rotate(-3deg) scale(0.8);
+      }
+    }
+  }
+  &:nth-of-type(5) {
+
+  }
+  &:nth-of-type(7) {
+    .adjective {
+      &:nth-child(1) {
+        margin-left: -20px;
+      }
+      &:nth-child(2) {
+        margin-right: 20px;
+      }
+    }
   }
 }
 @keyframes shuffleOut {
@@ -64,14 +112,12 @@
   }
   100% {
     opacity: 0;
-    transform: rotate(10deg);
   }
 }
 
 @keyframes shuffleIn {
   0% {
     opacity: 0;
-    transform: rotate(10deg);
   }
   100% {
     opacity: 1;

@@ -90,6 +90,23 @@ $(function() {
   };
   navButtons();
 
+  var cycleAdjectives = function() {
+    var _counter = 0;
+    var $els = $('.cycleThru');
+    var length = $els.length;
+    function showAdj() {
+      var rand = Math.floor( Math.random() * length );
+      $els.eq(_counter).css('opacity', '0');
+      $els.eq( rand ).css('opacity', '100');
+      _counter = rand;
+    }
+    var cycleInterval = setInterval(function() {
+      showAdj();
+    }, 8000)
+    showAdj();
+  }
+  cycleAdjectives();
+
   // Hard set height when using viewport units on mobile
   var lockHeight = function( $items ) {
     $items.each(function( i ) {
@@ -108,7 +125,6 @@ $(function() {
     });
   }
   // fullHeight( $('.index-header') );
-
 
   // PROJECT FILTER
   var projectCategories = [
@@ -161,52 +177,6 @@ $(function() {
     });
   };
   filterAttachListeners();
-
-  // Adjective Shuffler
-  var adjectives = [
-    ["Graphic", "Designer"],
-    ["Ravenclaw"],
-    ["Simlish", "translator"],
-    ["Star Trek", "enthusiast"],
-    ["Problem", "Solver"],
-    ["Logic", "lover"],
-    ["Dog", "Person"]
-  ];
-  var current = 0;
-  var shuffle = function() {
-    var string = "";
-    var rand = Math.floor( Math.random() * adjectives.length );
-    if ( rand === current ) {
-      rand = Math.floor( Math.random() * adjectives.length );
-    }
-    current = rand;
-    adjectives[rand].forEach(function( i ) {
-      string += "<span class='adjective shuffleIn'>" + i + "</span>";
-    });
-    $('.index-header-copy-adjectives').html(string);
-  };
-  shuffle();
-
-  var shufflePeriod = setInterval(function() {
-    var $adjs = $('.adjective');
-    $adjs.removeClass('shuffleIn');
-    $adjs.addClass('shuffleOut');
-    var timeout2 = window.setTimeout(function() {
-      shuffle();
-    }, 400);
-  }, 5000);
-
-  var shuffleAttachListener = function() {
-    $('.index-header-shuffle').on('click', function() {
-      var $adjs = $('.adjective');
-      $adjs.removeClass('shuffleIn');
-      $adjs.addClass('shuffleOut');
-      var timeout1 = window.setTimeout(function() {
-        shuffle();
-      }, 400);
-    });
-  };
-  shuffleAttachListener();
 
   var revealPaginate = function() {
     var scroll = $( window ).scrollTop();
