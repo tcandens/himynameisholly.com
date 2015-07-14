@@ -96,7 +96,7 @@ $(function() {
     var length = $els.length;
     function showAdj() {
       var rand = Math.floor( Math.random() * length );
-      if ( _counter ) {
+      if ( _counter || _counter === 0 ) {
         $els.eq(_counter).addClass('shuffleOut').removeClass('shuffleIn');
       }
       setTimeout(function() {
