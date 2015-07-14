@@ -108,6 +108,10 @@ $(function() {
       showAdj();
     }, 8000)
     showAdj();
+    $('.index-header-shuffle').click(function( e ) {
+      e.preventDefault();
+      showAdj();
+    });
   }
   cycleAdjectives();
 
