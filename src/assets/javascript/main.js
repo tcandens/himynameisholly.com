@@ -111,6 +111,10 @@ $(function() {
     $('.index-header-shuffle').click(function( e ) {
       e.preventDefault();
       showAdj();
+      clearInterval(cycleInterval);
+      cycleInterval = setInterval(function() {
+        showAdj();
+      }, 8000)
     });
   }
   cycleAdjectives();
