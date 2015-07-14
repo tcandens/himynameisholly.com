@@ -210,9 +210,6 @@ $(function() {
   var smoothState = $('#content').smoothState({
         prefetch: true,
         pageCacheSize: 3,
-        // onBefore: function( $currentTarget, $container ){
-        //   $container.addClass('is-exiting');
-        // },
         onStart: {
           duration: 400,
           render: function ( $container ) {
