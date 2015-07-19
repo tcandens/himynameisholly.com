@@ -102,17 +102,6 @@
   }
   .project-category {
     display: inline;
-    margin-right: 1em;
-    &:after {
-      content: '|';
-      position: relative;
-      left: 0.5em;
-    }
-    &:last-of-type {
-      &:after {
-        content: '';
-      }
-    }
   }
   .project-description {
     width: 100%;
@@ -184,9 +173,6 @@
   }
 }
 @media screen and (max-height: 600px) and (min-width: 767px) {
-  // body {
-  //   background-color: green;
-  // }
   .index-header {
     height: 560px;
   }

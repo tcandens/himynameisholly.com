@@ -1083,14 +1083,7 @@ h1, h2, h3 {
     width: 100%;
     text-align: center; }
   .project-category {
-    display: inline;
-    margin-right: 1em; }
-    .project-category:after {
-      content: '|';
-      position: relative;
-      left: 0.5em; }
-    .project-category:last-of-type:after {
-      content: ''; }
+    display: inline; }
   .project-description {
     width: 100%;
     margin: 0 auto 2em auto;
