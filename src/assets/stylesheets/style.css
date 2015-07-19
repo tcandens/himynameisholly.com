@@ -1000,7 +1000,7 @@ h1, h2, h3 {
 
 /* MEDIAQUERIES */
 /* Mobile Only - Very Small Screens */
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .f-5 {
     font-size: 2em; }
   .f-2 {
@@ -1105,14 +1105,14 @@ h1, h2, h3 {
   .project-logo:after {
     left: 100%; } }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   .project-list-item {
     width: 100%; }
   .project-list-link {
     width: 300px;
     height: 300px; } }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+@media screen and (min-width: 800px) and (max-width: 1200px) {
   .project-list-item {
     width: 33%; }
   .project-list-link {
@@ -1124,7 +1124,7 @@ h1, h2, h3 {
     font-size: 0.5em; } }
 
 /* Tablet breakpoint for header layout */
-@media screen and (min-width: 767px) {
+@media screen and (min-height: 601px) and (min-width: 767px) {
   html {
     font-size: 1.2em; }
   .index-header {
@@ -1140,6 +1140,23 @@ h1, h2, h3 {
     font-size: 2.3em; }
   .index-header-shuffle {
     height: 4.5em;
+    top: 0px;
+    right: 50px; } }
+
+@media screen and (max-height: 600px) and (min-width: 767px) {
+  .index-header {
+    height: 560px; }
+  .index-header-image {
+    width: 530px; }
+  .header-text-container {
+    top: -100px;
+    max-width: 500px; }
+  .slogan {
+    font-size: 0.8em; }
+  .index-header-copy-adjectives .adjective {
+    font-size: 2em; }
+  .index-header-shuffle {
+    height: 3.5em;
     top: 0px;
     right: 50px; } }
 
