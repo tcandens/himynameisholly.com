@@ -80,12 +80,17 @@ $(function() {
     });
 
     $('#work-button').on('click', function( e ) {
-      var scrollDown = $( window ).innerHeight();
+      var scrollDown;
+      if ( !localStorage.getItem('worktop') ) {
+        scrollDown = $( window ).innerHeight();
+      } else {
+        scrollDown = localStorage.getItem('worktop');
+      }
       $html.toggleClass('nav-list-open');
       setTimeout(function() {
         _scrollWindowTo( scrollDown );
         $('#nav').addClass('headroom--unpinned');
-      }, 450);
+      }, 400);
     });
   };
   navButtons();
@@ -205,7 +210,7 @@ $(function() {
           render: function( $container, $newContent ) {
             $container.removeClass('is-exiting');
             $container.html( $newContent );
-            $('.fittext').fitText();
+            $('.fittext').fitText(1.2);
           }
         },
         onAfter: function($container, $newContent) {
