@@ -887,12 +887,12 @@ h1, h2, h3 {
     display: block;
     position: relative;
     top: 54%;
-    width: 100%;
+    width: 80px;
     height: 2px; }
   .project-logo:before {
-    left: -110%; }
+    left: -90px; }
   .project-logo:after {
-    left: 110%; }
+    left: calc(100% + 10px); }
 
 .project-title {
   text-align: center; }
@@ -946,9 +946,9 @@ h1, h2, h3 {
   background-color: #6e6f2e; }
 
 .post-zulily .project-title {
-  color: inherit; }
+  color: #5d6785; }
 .post-zulily .project-logo:before, .post-zulily .project-logo:after {
-  background-color: inherit; }
+  background-color: #dfdfde; }
 
 .paginate-container {
   position: fixed;
@@ -1070,7 +1070,7 @@ h1, h2, h3 {
     width: 200px;
     height: 200px; }
   .post-header-title {
-    margin-top: 3em;
+    margin-top: 1em;
     margin-bottom: 1em; }
   .project-list-thumbnail__hover {
     opacity: 0; }
@@ -1090,13 +1090,7 @@ h1, h2, h3 {
     padding: 0; }
   .footer-social-icons {
     display: none;
-    visibility: hidden; }
-  .project-logo:before, .project-logo:after {
-    width: 50%; }
-  .project-logo:before {
-    left: -50%; }
-  .project-logo:after {
-    left: 100%; } }
+    visibility: hidden; } }
 
 @media screen and (max-width: 400px) {
   .project-list-item {

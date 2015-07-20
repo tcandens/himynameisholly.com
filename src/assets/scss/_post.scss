@@ -10,14 +10,14 @@
     display: block;
     position: relative;
     top: 54%;
-    width: 100%;
+    width: 80px;
     height: 2px;
   }
   &:before {
-    left: -110%;
+    left: -90px;
   }
   &:after {
-    left: 110%;
+    left: calc(100% + 10px);
   }
 }
 .project-title {
@@ -111,11 +111,11 @@
 .post-zulily {
   $color: inherit;
   .project-title {
-    color: $color;
+    color: #5d6785;
   }
   .project-logo {
     &:before, &:after {
-      background-color: $color;
+      background-color: #dfdfde;
     }
   }
 }
