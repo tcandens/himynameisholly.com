@@ -4,10 +4,10 @@
   <a href="#" class="nav-button"><span></span></a>
   <ul class="nav-list">
     <li class="nav-list-item f-2">
-      {% if page.url == 'index.html' %}
-      <a id="work-button" href="#">Work</a>
+      {% if page.url == '/index.html' %}
+      <a id="work-button" href="#work">Work</a>
       {% else %}
-      <a id="work-button" href="{{ site.url }}">Work</a>
+      <a id="work-button" href="{{ site.url }}#work">Work</a>
       {% endif %}
     </li>
     <li class="nav-list-item f-2"><a id="contact-button" href="#">Contact</a></li>
