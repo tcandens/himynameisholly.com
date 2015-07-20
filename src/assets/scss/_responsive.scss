@@ -112,15 +112,9 @@
     display: none;
     visibility: hidden;
   }
-  // .project-logo:before, .project-logo:after {
-  //   width: 50%;
-  // }
-  // .project-logo:before {
-  //   left: -50%;
-  // }
-  // .project-logo:after {
-  //   left: 100%;
-  // }
+  .project-logo {
+    transform: scale(0.5);
+  }
 }
 @media screen and (max-width: 400px) {
   .project-list-item {
