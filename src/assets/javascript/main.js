@@ -47,7 +47,7 @@ $(function() {
 
   })( jQuery );
 
-  $('.fittext').fitText();
+  $('.fittext').fitText(1.2);
 
   // Helper function to deal with mobile discrepencies
   var _scrollWindowTo = function( val, animate ) {
