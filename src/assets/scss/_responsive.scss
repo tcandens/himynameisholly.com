@@ -126,6 +126,9 @@
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1200px) {
+  .header {
+    padding-top: 90px;
+  }
   .project-list-item {
     width: 33%;
   }
