@@ -1150,7 +1150,8 @@ h1, h2, h3 {
   html {
     font-size: 1.2em; }
   .index-header {
-    height: 800px; }
+    height: 800px;
+    height: 100vh; }
   .index-header-image {
     width: 768px; }
   .header-text-container {
@@ -1167,7 +1168,8 @@ h1, h2, h3 {
 
 @media screen and (max-height: 600px) and (min-width: 767px) {
   .index-header {
-    height: 560px; }
+    height: 560px;
+    height: 100vh; }
   .index-header-image {
     width: 530px; }
   .header-text-container {
