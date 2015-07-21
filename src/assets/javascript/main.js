@@ -49,17 +49,35 @@ $(function() {
 
   $('.fittext').fitText(1.2);
 
-  // Helper function to deal with mobile discrepencies
-  var _scrollWindowTo = function( val, animate ) {
-    $(document).scrollTop( val );
-  }
-
   var headroomInit = function() {
     var el = document.querySelector('nav');
     var headroom = new Headroom(el);
     headroom.init();
   };
   headroomInit();
+
+  function whichAnimationEvent(){
+    var a;
+    var el = document.createElement('fakeelement');
+    var animations = {
+      'animation':'animationend',
+      'OAnimation':'oAnimationEnd',
+      'MozAnimation':'animationend',
+      'WebkitAnimation':'webkitAnimationEnd'
+    }
+
+    for(a in animations) {
+      if( el.style[a] !== undefined ){
+          return animations[a];
+      }
+    }
+  }
+  var animationEvent = whichAnimationEvent();
+  // Cache position of work areas scrollOffset
+  document.getElementById('work').addEventListener( animationEvent, function() {
+    window.workAreaScrollOffset = $('#work').offset().top;
+    console.log('Transition over! Caching final positions!');
+  });
 
   var navButtons = function() {
     $html = $('html');
@@ -80,17 +98,14 @@ $(function() {
     });
 
     $('#work-button').on('click', function( e ) {
-      var scrollDown;
-      if ( !localStorage.getItem('worktop') ) {
-        scrollDown = $( window ).innerHeight();
-      } else {
-        scrollDown = localStorage.getItem('worktop');
-      }
+      e.preventDefault();
+      var scrollDown = window.workAreaOffsetTop || $( window ).height();
+      console.log( scrollDown );
       $html.toggleClass('nav-list-open');
       setTimeout(function() {
-        _scrollWindowTo( scrollDown );
+        $( document ).scrollTop( scrollDown );
         $('#nav').addClass('headroom--unpinned');
-      }, 400);
+      }, 420);
     });
   };
   navButtons();
@@ -202,7 +217,7 @@ $(function() {
         onProgress: {
           duration: 0,
           render: function( $container ) {
-            _scrollWindowTo( 0 );
+            $( document ).scrollTop( 0 );
           }
         },
         onReady: {

@@ -16,20 +16,5 @@
 
 </script>
 <!-- End Google Analytics -->
-{% if page.url == '/index.html' %}
-<script type="text/javascript">
-  $(function() {
-    function cacheWorkTopPosition() {
-      if ( localStorage.getItem('worktop') !== null ) {
-        return localStorage.removeItem('worktop');
-      }
-      var top = $('#work').offset().top;
-      localStorage.setItem('worktop', top );
-      console.log( top );
-    }
-    cacheWorkTopPosition();
-  });
-</script>
-{% endif %}
 </body>
 </html>
