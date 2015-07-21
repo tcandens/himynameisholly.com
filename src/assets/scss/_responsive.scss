@@ -79,6 +79,9 @@
     width: 50%;
     margin-bottom: 2em;
   }
+  .project-list-item:nth-last-child(1) {
+    width: 100%;
+  }
   .project-list-link {
     width: 200px;
     height: 200px;
@@ -126,15 +129,20 @@
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1200px) {
-  .header {
-    padding-top: 90px;
-  }
   .project-list-item {
     width: 33%;
   }
   .project-list-link {
     width: 200px;
     height: 200px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header {
+    padding-top: 90px;
+  }
+  .project-list-item:nth-last-child(1) {
+    width: 100%;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 800px) {
