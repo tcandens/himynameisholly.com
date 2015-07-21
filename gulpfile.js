@@ -71,7 +71,7 @@ gulp.task("images", function () {
 gulp.task('sprites', function() {
   return sprity.src({
     src: './src/assets/images/projects/**/icon.png',
-    style: 'sprite.scss',
+    style: '_sprite.scss',
     out: './src/assets/images/icons/',
     opacity: 100,
     prefix: 'sprite',
