@@ -65,7 +65,7 @@ app/_bower_components
 serve
 site
 
-src/stylesheets/
+src/assets/stylesheets/
 
 # hide the AWS and Rsync credentials file
 aws-credentials.json
