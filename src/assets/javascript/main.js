@@ -100,14 +100,14 @@ $(function() {
     var $els = $('.cycleThru');
     var length = $els.length;
     function showAdj() {
-      if ( _counter > length ) {
-        _counter = 0
+      if ( _counter >= length ) {
+        _counter = 0;
       }
-      $els.eq(_counter).addClass('shuffleOut').removeClass('shuffleIn');
+      $('.shuffleIn').addClass('shuffleOut').removeClass('shuffleIn');
       setTimeout(function() {
-        $els.eq( _counter++ ).addClass('shuffleIn').removeClass('shuffleOut');
+        $els.eq( _counter ).addClass('shuffleIn').removeClass('shuffleOut');
+        _counter++;
       }, 400)
-      _counter++;
     }
     var cycleInterval = setInterval(function() {
       showAdj();
