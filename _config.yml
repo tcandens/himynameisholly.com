@@ -17,9 +17,6 @@ author:
   bio:
   twitter:
 
-# general setting for Jekyll
-googleAnalytics: UA-XXXXX-X
-
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
 future: true
@@ -33,6 +30,9 @@ limit_posts: 10
 relative_permalinks: true
 permalink: /:title.html
 excerpt_separator: '<!--more-->'
+
+# Exclude SASS source
+exclude: ['assets/scss/']
 
 # Markdown library
 markdown: redcarpet

@@ -12,5 +12,7 @@ lsi: true
 # Removes the upper limit for posts generated
 limit_posts: 0
 
+# Exclude SASS source
+exclude: ['assets/scss/']
 source: 'src'
 destination: 'serve'

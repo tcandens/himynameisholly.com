@@ -150,7 +150,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "sprites", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["jekyll:prod", "sprites", "styles"], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",
@@ -188,7 +188,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 });
 
 // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod", "styles", "sprites"], function () {});
+gulp.task("build", ["jekyll:prod", "sprites", "styles"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
