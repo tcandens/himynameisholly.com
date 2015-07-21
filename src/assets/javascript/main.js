@@ -96,18 +96,18 @@ $(function() {
   navButtons();
 
   var cycleAdjectives = function() {
-    var _counter;
+    var _counter = 0;
     var $els = $('.cycleThru');
     var length = $els.length;
     function showAdj() {
-      var rand = Math.floor( Math.random() * length );
-      if ( _counter || _counter === 0 ) {
-        $els.eq(_counter).addClass('shuffleOut').removeClass('shuffleIn');
+      if ( _counter > length ) {
+        _counter = 0
       }
+      $els.eq(_counter).addClass('shuffleOut').removeClass('shuffleIn');
       setTimeout(function() {
-        $els.eq( rand ).addClass('shuffleIn').removeClass('shuffleOut');
+        $els.eq( _counter++ ).addClass('shuffleIn').removeClass('shuffleOut');
       }, 400)
-      _counter = rand;
+      _counter++;
     }
     var cycleInterval = setInterval(function() {
       showAdj();

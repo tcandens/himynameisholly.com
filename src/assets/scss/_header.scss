@@ -110,7 +110,7 @@
         transform: translate3d(-80%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
-        transform: translate3d(80%, 100%, 0) rotate(1deg);
+        transform: translate3d(85%, 100%, 0) rotate(1deg);
       }
     }
   }
@@ -118,10 +118,10 @@
   &:nth-of-type(5) {
     .adjective {
       &:nth-child(1) {
-        transform: translate3d(-85%, 0, 0) rotate(-3deg);
+        transform: translate3d(-75%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
-        transform: translate3d(125%, 60%, 0) rotate(2deg);
+        transform: translate3d(125%, 70%, 0) rotate(2deg);
       }
     }
   }

@@ -495,14 +495,14 @@ h1, h2, h3 {
     -webkit-transform: translate3d(-80%, 0, 0) rotate(-3deg);
             transform: translate3d(-80%, 0, 0) rotate(-3deg); }
   .index-header-copy-adjectives:nth-of-type(4) .adjective:nth-child(2) {
-    -webkit-transform: translate3d(80%, 100%, 0) rotate(1deg);
-            transform: translate3d(80%, 100%, 0) rotate(1deg); }
+    -webkit-transform: translate3d(85%, 100%, 0) rotate(1deg);
+            transform: translate3d(85%, 100%, 0) rotate(1deg); }
   .index-header-copy-adjectives:nth-of-type(5) .adjective:nth-child(1) {
-    -webkit-transform: translate3d(-85%, 0, 0) rotate(-3deg);
-            transform: translate3d(-85%, 0, 0) rotate(-3deg); }
+    -webkit-transform: translate3d(-75%, 0, 0) rotate(-3deg);
+            transform: translate3d(-75%, 0, 0) rotate(-3deg); }
   .index-header-copy-adjectives:nth-of-type(5) .adjective:nth-child(2) {
-    -webkit-transform: translate3d(125%, 60%, 0) rotate(2deg);
-            transform: translate3d(125%, 60%, 0) rotate(2deg); }
+    -webkit-transform: translate3d(125%, 70%, 0) rotate(2deg);
+            transform: translate3d(125%, 70%, 0) rotate(2deg); }
   .index-header-copy-adjectives:nth-of-type(6) .adjective:nth-child(1) {
     -webkit-transform: translate3d(-90%, 0, 0);
             transform: translate3d(-90%, 0, 0); }
