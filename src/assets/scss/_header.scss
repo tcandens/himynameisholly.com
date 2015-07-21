@@ -5,6 +5,7 @@
   height: 100%;
   padding-top: 70px;
   overflow: auto;
+  overflow-x: hidden;
 }
 .index-header {
   height: 440px;
@@ -21,7 +22,7 @@
 .header-text-container {
   position: relative;
   margin: 0 auto;
-  top: -45px;
+  top: -50px;
   max-width: 320px;
   text-align: center;
 }
@@ -49,38 +50,56 @@
   position: absolute;
   display: block;
   white-space: pre;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   &:only-of-type {
     left: 50%;
-    transform: translate3d(-50%, 0, 0) rotate(-3deg);
+    transform: translate3d(-50%, 0, 0);
   }
   &:not(:only-of-type):nth-child(1) {
     left: 50%;
-    transform: translate3d(-90%, 0, 0) rotate(-3deg);
+    transform: translate3d(-100%, 0, 0);
   }
   &:not(:only-of-type):nth-child(2) {
     right: 50%;
-    transform: translate3d(100%, 60%, 0) rotate(3deg) scale(0.8);
+    transform: translate3d(100%, 60%, 0);
   }
 }
 .index-header-copy-adjectives {
   position: absolute;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-left: 15%;
+  margin-right: 25%;
   display: block;
   min-height: 20px;
-  width: 100%;
+  width: 60%;
   opacity: 0;
   &:nth-of-type(1) {
-    // background-color: purple;
+    .adjective {
+      &:nth-child(1) {
+        transform: translate3d(-90%, 0, 0) rotate(-3deg);
+      }
+      &:nth-child(2) {
+        right: 50%;
+        transform: translate3d(100%, 80%, 0) rotate(2deg);
+      }
+    }
   }
+  // "RAVENCLAW"
   &:nth-of-type(2) {
-    // background-color: red;
+    .adjective {
+      &:nth-child(1) {
+        transform: translate3d(-40%, 0, 0);
+      }
+    }
   }
   // "SIMLISH TRANSLATOR"
   &:nth-of-type(3) {
     .adjective {
+      &:nth-child(1) {
+        transform: translate3d(-100%, 0, 0) rotate(-3deg);
+      }
       &:nth-child(2) {
-        transform: translate3d(60%, 70%, 0) rotate(-3deg) scale(0.8);
+        transform: translate3d(80%, 90%, 0) rotate(1deg);
       }
     }
   }
@@ -88,23 +107,43 @@
   &:nth-of-type(4) {
     .adjective {
       &:nth-child(1) {
-        transform: translate3d(-70%, 0, 0) rotate(-3deg);
+        transform: translate3d(-80%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
-        transform: translate3d(60%, 70%, 0) rotate(-3deg) scale(0.8);
+        transform: translate3d(85%, 100%, 0) rotate(1deg);
       }
     }
   }
+  // "PROBLEM SOLVER"
   &:nth-of-type(5) {
-
+    .adjective {
+      &:nth-child(1) {
+        transform: translate3d(-75%, 0, 0) rotate(-3deg);
+      }
+      &:nth-child(2) {
+        transform: translate3d(125%, 70%, 0) rotate(2deg);
+      }
+    }
   }
+  // "LOGIC LOVER"
+  &:nth-of-type(6) {
+    .adjective {
+      &:nth-child(1) {
+        transform: translate3d(-90%, 0, 0);
+      }
+      &:nth-child(2) {
+        transform: translate3d(125%, 0, 0);
+      }
+    }
+  }
+  // "DOG PERSON"
   &:nth-of-type(7) {
     .adjective {
       &:nth-child(1) {
-        margin-left: -20px;
+        transform: translate3d(-100%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
-        margin-right: 20px;
+        transform: translate3d(100%, 60%, 0) rotate(1deg);
       }
     }
   }

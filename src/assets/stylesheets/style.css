@@ -64,38 +64,38 @@ img {
 
 .sprite-mos-icon {
   background-position: 0px 0px;
-  width: 86px;
-  height: 51px; }
+  width: 208px;
+  height: 118px; }
 
 .sprite-sixohfive-icon {
-  background-position: 0px -51px;
-  width: 88px;
-  height: 58px; }
-
-.sprite-zulily-icon {
-  background-position: 0px -109px;
-  width: 68px;
-  height: 65px; }
-
-.sprite-ww-icon {
-  background-position: 0px -174px;
-  width: 58px;
-  height: 84px; }
+  background-position: 0px -118px;
+  width: 184px;
+  height: 118px; }
 
 .sprite-do-icon {
-  background-position: 0px -258px;
-  width: 68px;
-  height: 85px; }
-
-.sprite-sqtm-icon {
-  background-position: 0px -343px;
-  width: 83px;
-  height: 101px; }
+  background-position: 0px -236px;
+  width: 108px;
+  height: 136px; }
 
 .sprite-julep-icon {
-  background-position: 0px -444px;
-  width: 31px;
-  height: 108px; }
+  background-position: 0px -372px;
+  width: 38px;
+  height: 138px; }
+
+.sprite-sqtm-icon {
+  background-position: 0px -510px;
+  width: 113px;
+  height: 138px; }
+
+.sprite-zulily-icon {
+  background-position: 0px -648px;
+  width: 148px;
+  height: 142px; }
+
+.sprite-ww-icon {
+  background-position: 0px -790px;
+  width: 108px;
+  height: 161px; }
 
 /* Set font-family for Mount: "da-font.com/mount"; created with typesquirrel.com */
 @font-face {
@@ -404,7 +404,8 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
   padding-top: 70px;
-  overflow: auto; }
+  overflow: auto;
+  overflow-x: hidden; }
 
 .index-header {
   height: 440px;
@@ -421,7 +422,7 @@ h1, h2, h3 {
 .header-text-container {
   position: relative;
   margin: 0 auto;
-  top: -45px;
+  top: -50px;
   max-width: 320px;
   text-align: center; }
 
@@ -451,40 +452,69 @@ h1, h2, h3 {
   position: absolute;
   display: block;
   white-space: pre;
-  font-size: 1.8rem; }
+  font-size: 1.5rem; }
   .index-header-copy-adjectives .adjective:only-of-type {
     left: 50%;
-    -webkit-transform: translate3d(-50%, 0, 0) rotate(-3deg);
-            transform: translate3d(-50%, 0, 0) rotate(-3deg); }
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0); }
   .index-header-copy-adjectives .adjective:not(:only-of-type):nth-child(1) {
     left: 50%;
-    -webkit-transform: translate3d(-90%, 0, 0) rotate(-3deg);
-            transform: translate3d(-90%, 0, 0) rotate(-3deg); }
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
   .index-header-copy-adjectives .adjective:not(:only-of-type):nth-child(2) {
     right: 50%;
-    -webkit-transform: translate3d(100%, 60%, 0) rotate(3deg) scale(0.8);
-            transform: translate3d(100%, 60%, 0) rotate(3deg) scale(0.8); }
+    -webkit-transform: translate3d(100%, 60%, 0);
+            transform: translate3d(100%, 60%, 0); }
 
 .index-header-copy-adjectives {
   position: absolute;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-left: 15%;
+  margin-right: 25%;
   display: block;
   min-height: 20px;
-  width: 100%;
+  width: 60%;
   opacity: 0; }
+  .index-header-copy-adjectives:nth-of-type(1) .adjective:nth-child(1) {
+    -webkit-transform: translate3d(-90%, 0, 0) rotate(-3deg);
+            transform: translate3d(-90%, 0, 0) rotate(-3deg); }
+  .index-header-copy-adjectives:nth-of-type(1) .adjective:nth-child(2) {
+    right: 50%;
+    -webkit-transform: translate3d(100%, 80%, 0) rotate(2deg);
+            transform: translate3d(100%, 80%, 0) rotate(2deg); }
+  .index-header-copy-adjectives:nth-of-type(2) .adjective:nth-child(1) {
+    -webkit-transform: translate3d(-40%, 0, 0);
+            transform: translate3d(-40%, 0, 0); }
+  .index-header-copy-adjectives:nth-of-type(3) .adjective:nth-child(1) {
+    -webkit-transform: translate3d(-100%, 0, 0) rotate(-3deg);
+            transform: translate3d(-100%, 0, 0) rotate(-3deg); }
   .index-header-copy-adjectives:nth-of-type(3) .adjective:nth-child(2) {
-    -webkit-transform: translate3d(60%, 70%, 0) rotate(-3deg) scale(0.8);
-            transform: translate3d(60%, 70%, 0) rotate(-3deg) scale(0.8); }
+    -webkit-transform: translate3d(80%, 90%, 0) rotate(1deg);
+            transform: translate3d(80%, 90%, 0) rotate(1deg); }
   .index-header-copy-adjectives:nth-of-type(4) .adjective:nth-child(1) {
-    -webkit-transform: translate3d(-70%, 0, 0) rotate(-3deg);
-            transform: translate3d(-70%, 0, 0) rotate(-3deg); }
+    -webkit-transform: translate3d(-80%, 0, 0) rotate(-3deg);
+            transform: translate3d(-80%, 0, 0) rotate(-3deg); }
   .index-header-copy-adjectives:nth-of-type(4) .adjective:nth-child(2) {
-    -webkit-transform: translate3d(60%, 70%, 0) rotate(-3deg) scale(0.8);
-            transform: translate3d(60%, 70%, 0) rotate(-3deg) scale(0.8); }
+    -webkit-transform: translate3d(85%, 100%, 0) rotate(1deg);
+            transform: translate3d(85%, 100%, 0) rotate(1deg); }
+  .index-header-copy-adjectives:nth-of-type(5) .adjective:nth-child(1) {
+    -webkit-transform: translate3d(-75%, 0, 0) rotate(-3deg);
+            transform: translate3d(-75%, 0, 0) rotate(-3deg); }
+  .index-header-copy-adjectives:nth-of-type(5) .adjective:nth-child(2) {
+    -webkit-transform: translate3d(125%, 70%, 0) rotate(2deg);
+            transform: translate3d(125%, 70%, 0) rotate(2deg); }
+  .index-header-copy-adjectives:nth-of-type(6) .adjective:nth-child(1) {
+    -webkit-transform: translate3d(-90%, 0, 0);
+            transform: translate3d(-90%, 0, 0); }
+  .index-header-copy-adjectives:nth-of-type(6) .adjective:nth-child(2) {
+    -webkit-transform: translate3d(125%, 0, 0);
+            transform: translate3d(125%, 0, 0); }
   .index-header-copy-adjectives:nth-of-type(7) .adjective:nth-child(1) {
-    margin-left: -20px; }
+    -webkit-transform: translate3d(-100%, 0, 0) rotate(-3deg);
+            transform: translate3d(-100%, 0, 0) rotate(-3deg); }
   .index-header-copy-adjectives:nth-of-type(7) .adjective:nth-child(2) {
-    margin-right: 20px; }
+    -webkit-transform: translate3d(100%, 60%, 0) rotate(1deg);
+            transform: translate3d(100%, 60%, 0) rotate(1deg); }
 
 @-webkit-keyframes shuffleOut {
   0% {
@@ -1091,7 +1121,11 @@ h1, h2, h3 {
     padding: 0; }
   .footer-social-icons {
     display: none;
-    visibility: hidden; } }
+    visibility: hidden; }
+  .project-logo {
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5); } }
 
 @media screen and (max-width: 400px) {
   .project-list-item {
