@@ -201,7 +201,9 @@ $(function() {
       revealPaginate();
     }, 500);
   }
-  revealPaginate();
+  var delayPaginate = setTimeout(function(){
+    revealPaginate();
+  }, 3000);
 
   // SmoothState.js
   var smoothState = $('#content').smoothState({
