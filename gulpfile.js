@@ -1,4 +1,3 @@
-// Generated on 2015-03-12 using generator-jekyllized 0.7.1
 "use strict";
 
 var gulp = require("gulp");
@@ -16,6 +15,7 @@ var reload = browserSync.reload;
 // And define a variable that BrowserSync uses in it"s function
 var bs;
 var sprity = require('sprity');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
@@ -39,11 +39,14 @@ gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config
 gulp.task("styles", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
   return gulp.src("src/assets/scss/style.scss")
+    .pipe(sourcemaps.init())
     .pipe($.sass())
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", { cascade: true }))
     // Directory your CSS file goes to
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest("serve/assets/stylesheets/"))
+    .pipe(gulp.dest("src/assets/stylesheets/"))
     // Outputs the size of the CSS file
     .pipe($.size({title: "styles"}))
     // Injects the CSS changes to your browser since Jekyll doesn"t rebuild the CSS
@@ -150,7 +153,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["jekyll:prod", "sprites", "styles"], function () {
+gulp.task("serve:dev", [ "build" ], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",
@@ -193,5 +196,5 @@ gulp.task("build", ["jekyll:prod", "sprites", "styles"], function () {});
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "minify", "copy", "htaccess", "styles", "images", "fonts");
+  gulp.start("html", "minify", "copy", "htaccess", "images", "fonts");
 });

@@ -1,13 +1,15 @@
 /* MEDIAQUERIES */
 
 /* Mobile Only - Very Small Screens */
-
 @media screen and (max-width: 800px) {
   .f-5 {
     font-size: 2em;
   }
   .f-2 {
     font-size: _ems(20);
+  }
+  .index-header {
+    margin-top: 40px;
   }
   .nav {
     height: 70px;
@@ -157,7 +159,7 @@
   }
   .index-header {
     height: 800px;
-    height: 100vh;
+    /*height: 100vh;*/
   }
   .index-header-image {
     width: 768px;
@@ -181,7 +183,7 @@
 @media screen and (max-height: 600px) and (min-width: 767px) {
   .index-header {
     height: 560px;
-    height: 100vh;
+    /*height: 100vh;*/
   }
   .index-header-image {
     width: 530px;

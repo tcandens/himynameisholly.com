@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "description": "Yeoman workflow for himynameisholly com",
   "dependencies": {
-    "gulp-if": "^1.2.5"
+    "gulp-if": "^1.2.5",
+    "gulp-sourcemaps": "^1.5.2"
   },
   "devDependencies": {
     "browser-sync": "^1.5.7",
