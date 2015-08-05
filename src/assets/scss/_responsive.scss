@@ -13,6 +13,7 @@
   }
   .nav {
     height: 70px;
+    overflow: hidden;
   }
   .nav-logo {
     width: 60px;
@@ -28,14 +29,10 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%;
-    height: 0%;
-    background: transparentize($perriwinkle, 0.1);
     margin: 0;
     padding: 80px 0 0 0;
-    overflow: hidden;
     @include clearfix();
     transition: all 400ms ease;
-    transform: translate3d(0,-100%,0);
     .f-2 {
       font-size: 4em;
     }
@@ -52,19 +49,7 @@
   .nav-list-open {
     .nav {
       height: 100%;
-      background: transparent;
-    }
-    .nav-list {
-      height: 100%;
-    }
-    .nav-logo {
-      opacity: 0.5;
-    }
-    .nav-list {
-      transform: translate3d(0,0,0);
-    }
-    .headroom--unpinned .nav-list {
-      transform: translate3d(0,-100%,0);
+      background-color: $perriwinkle;
     }
   }
   .social-icons {
