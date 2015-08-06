@@ -74,10 +74,12 @@ $(function() {
   }
   var animationEvent = whichAnimationEvent();
   // Cache position of work areas scrollOffset
-  document.getElementById('work').addEventListener( animationEvent, function() {
-    window.workAreaScrollOffset = $('#work').offset().top;
-    console.log('Transition over! Caching final positions!');
-  });
+  if ( document.getElementById('work') ) {
+    document.getElementById('work').addEventListener( animationEvent, function() {
+      window.workAreaScrollOffset = $('#work').offset().top;
+      console.log('Transition over! Caching final positions!');
+    });
+  }
 
   var navButtons = function() {
     $html = $('html');

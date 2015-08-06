@@ -1,12 +1,12 @@
 .contact-overlay {
   position: fixed;
   top: 0; left: 0;
-  bottom: 0; right: 0;
-  padding-top: 120px;
-  background: transparentize($blue, 0.2);
+  height: 0;
+  /*padding-top: 120px;*/
+  background: transparent;
   z-index: $z-navigation;
-  transform: translate3d(0, calc(-100% - 70px), 0);
-  // transform: translateY(0);
+  /*transform: translate3d(0, calc(-100% - 70px), 0);*/
+  transform: translateY(0);
   transition: all 600ms ease;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
 }
 .contact-overlay-esc {
   display: block;
-  margin: -80px auto 20px auto;
+  margin: 20px auto 20px auto;
   background: transparent;
   $width: 45px;
   $stroke: 10px;
@@ -51,11 +51,11 @@
   }
 }
 
-
 .contact-overlay-open {
-
   .contact-overlay {
-    transform: translate3d(0,0,0);
+    height: 100%;
+    background: transparentize($blue, 0.2);
+    /*transform: translate3d(0,0,0);*/
   }
   // .contact-overlay-esc {
   //   span {
