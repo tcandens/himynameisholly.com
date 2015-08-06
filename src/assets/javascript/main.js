@@ -193,7 +193,8 @@ $(function() {
 
   var revealPaginate = function() {
     var scroll = $( window ).scrollTop();
-    var target = $( document ).innerHeight() - $( window ).innerHeight()*2;
+    var target = $( document ).innerHeight() - $( window ).innerHeight()*1.2;
+    //var target = $( document ).innerHeight() - $( window ).innerHeight() + 10;
     if ( scroll >= target ) {
       $('.paginate-container').removeClass('paginate-hidden');
     } else if ( scroll < target ) {
