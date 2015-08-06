@@ -97,6 +97,7 @@ $(function() {
     $('#contact-overlay-esc').on('click', function(e) {
       e.preventDefault();
       $html.removeClass('contact-overlay-open');
+      $html.addClass('nav-list-open');
     });
 
     $('#work-button').on('click', function( e ) {
