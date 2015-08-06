@@ -106,9 +106,11 @@
     margin: 0 auto 2em auto;
     padding: 0;
   }
-  .footer-social-icons {
+  .footer {
+    height: 0.8em;
+  }
+  .footer-social-links {
     display: none;
-    visibility: hidden;
   }
   .project-logo {
     transform: scale(0.5);
