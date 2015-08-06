@@ -74,10 +74,11 @@
   min-height: 20px;
   width: 60%;
   opacity: 0;
+  // "GRAPHIC DESIGNER"
   &:nth-of-type(1) {
     .adjective {
       &:nth-child(1) {
-        transform: translate3d(-90%, 0, 0) rotate(-3deg);
+        transform: translate3d(-80%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
         right: 50%;
@@ -100,7 +101,7 @@
         transform: translate3d(-100%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
-        transform: translate3d(80%, 90%, 0) rotate(1deg);
+        transform: translate3d(85%, 90%, 0) rotate(1deg);
       }
     }
   }
@@ -108,7 +109,7 @@
   &:nth-of-type(4) {
     .adjective {
       &:nth-child(1) {
-        transform: translate3d(-80%, 0, 0) rotate(-3deg);
+        transform: translate3d(-70%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
         transform: translate3d(85%, 100%, 0) rotate(1deg);
@@ -122,7 +123,7 @@
         transform: translate3d(-75%, 0, 0) rotate(-3deg);
       }
       &:nth-child(2) {
-        transform: translate3d(125%, 70%, 0) rotate(2deg);
+        transform: translate3d(130%, 80%, 0) rotate(2deg);
       }
     }
   }
