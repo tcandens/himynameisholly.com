@@ -111,14 +111,11 @@
   width: $dimension;
   height: $dimension;
 }
-.social-icons_link {
+.nav-social-icon {
   display: block;
+  fill: white;
   margin: 0 auto;
   $dimension: 50px;
   width: $dimension;
   height: $dimension;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: opacity 400ms ease;
-  @include hide-text;
 }
