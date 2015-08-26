@@ -70,7 +70,7 @@ gulp.task("images", function () {
     .pipe($.size({title: "images"}));
 });
 
-gulp.task('sprites', function() {
+gulp.task('sprites:png', function() {
   return sprity.src({
     src: './src/assets/images/projects/**/icon.png',
     style: '_sprite.scss',
@@ -80,7 +80,15 @@ gulp.task('sprites', function() {
     cssPath: '../images/'
   })
     .pipe($.if('*.png', gulp.dest('./src/assets/images/'), gulp.dest('./src/assets/scss/')))
-})
+});
+gulp.task('sprites:svg', function() {
+  return gulp.src('./src/assets/images/icons/*.svg')
+    .pipe($.imagemin({
+      multipass: true
+    }))
+    .pipe($.svgstore())
+    .pipe(gulp.dest('./src/_includes'));
+});
 
 // Copy over fonts to the "site" directory
 gulp.task("fonts", function () {
@@ -191,7 +199,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 });
 
 // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod", "sprites", "styles"], function () {});
+gulp.task("build", ["jekyll:prod","sprites:svg", "sprites:png", "styles"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
