@@ -121,22 +121,4 @@
   background-repeat: no-repeat;
   transition: opacity 400ms ease;
   @include hide-text;
-  &[href^="http://www.facebook"] {
-    background-image: url('#{$IMG_DIR}/icons/facebook.svg');
-  }
-  &[href^="http://www.twitter"] {
-    background-image: url('#{$IMG_DIR}/icons/twitter.svg');
-  }
-  &[href^="http://www.linkedin"] {
-    background-image: url('#{$IMG_DIR}/icons/linkedin.svg');
-  }
-  &[href^="http://www.tumblr.com"] {
-    background-image: url('#{$IMG_DIR}/icons/tumblr.svg');
-  }
-  &[href^="http://www.instagram.com"] {
-    background-image: url('#{$IMG_DIR}/icons/instagram.svg');
-  }
-  &:hover {
-    opacity: 0.5;
-  }
 }

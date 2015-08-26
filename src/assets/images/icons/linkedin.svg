@@ -1,25 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<?xml version="1.0" encoding="utf-8"?>
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="254.748"
-   height="253.851"
-   viewBox="0 0 254.748 253.851"
-   id="Layer_1"
-   xml:space="preserve"><metadata
-     id="metadata9"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs7" /><g
-     transform="matrix(0.94351852,0,0,0.94018519,300.83945,-37.931373)"
-     id="g10058"><path
-       d="M 18.8125,0 C 8.4343059,0 0,8.1918878 0,18.28125 l 0,217.25 c 0,10.10925 8.4343059,18.3125 18.8125,18.3125 l 217.0625,0 c 10.38932,0 18.875,-8.20325 18.875,-18.3125 l 0,-217.25 C 254.75,8.1918878 246.26432,0 235.875,0 L 18.8125,0 z m 37.84375,34.9375 c 12.079632,0 21.90625,9.801151 21.90625,21.84375 0,12.054349 -9.826618,21.84375 -21.90625,21.84375 C 44.544426,78.625 34.75,68.835599 34.75,56.78125 34.75,44.738651 44.544426,34.9375 56.65625,34.9375 z m 115.125,57.21875 c 38.23373,0 45.28125,25.08845 45.28125,57.71875 l 0,66.4375 -37.75,0 0,-58.90625 c 0,-14.05682 -0.26164,-32.125 -19.625,-32.125 -19.66175,0 -22.65625,15.29289 -22.65625,31.09375 l 0,59.9375 -37.78125,0 0,-121.125 36.25,0 0,16.53125 0.5,0 c 5.04547,-9.52055 17.39915,-19.5625 35.78125,-19.5625 z M 37.75,95.1875 l 37.8125,0 0,121.125 -37.8125,0 0,-121.125 z"
-       transform="matrix(1.0598626,0,0,1.0636203,-318.84849,40.344576)"
-       id="path10011"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g></svg>
+
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+
+<path id="linkedin-square-rounded-icon" d="M411.945,50h-312c-27.614,0-50,22.386-50,50v312c0,27.614,22.386,50,50,50h312
+
+	c27.614,0,50-22.386,50-50V100C461.945,72.386,439.56,50,411.945,50z M180.996,392.99h-56.537V210.336h56.537V392.99z
+
+	 M152.457,186.417c-18.465,0-33.432-15.09-33.432-33.703c0-18.614,14.967-33.704,33.432-33.704c18.463,0,33.432,15.09,33.432,33.704
+
+	C185.889,171.327,170.92,186.417,152.457,186.417z M392.865,392.99h-56.262c0,0,0-69.582,0-95.881
+
+	c0-26.296-9.988-40.974-30.781-40.974c-22.629,0-34.453,15.289-34.453,40.974c0,28.133,0,95.881,0,95.881h-54.223V210.336h54.223
+
+	v24.599c0,0,16.309-30.171,55.041-30.171s66.455,23.648,66.455,72.572C392.865,326.262,392.865,392.99,392.865,392.99z"/>
+
+</svg>
+

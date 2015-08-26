@@ -26,27 +26,16 @@
 }
 .footer-social-icons_item {
   display: table-cell;
-  padding: 10px;
-  // $dimension: 100px;
-  // width: $dimension;
-  // height: $dimension;
-  transition: opacity 400ms ease;
-  // @include mediaquery(phablet) {
-  //   $dimension: 80px;
-  //   width: $dimension;
-  //   height: $dimension;
-  // }
+  padding: 5px;
   @include mediaquery(phabletplus) {
     display: inline-block;
   }
-  // @include mediaquery(tabletplus) {
-  //   $dimension: 100px;
-  //   width: $dimension;
-  //   height: $dimension;
-  // }
-  &:hover {
-    opacity: 0.6;
-  }
+}
+.footer-social-icon {
+  fill: white;
+  width: 80px;
+  height: 80px;
+  transition: fill 400ms ease;
 }
 
 $icon-facebook: #53be93;
@@ -55,67 +44,28 @@ $icon-twitter: #db98e5;
 $icon-tumblr: #c2cde9;
 $icon-instagram: #f79e86;
 
-.footer-social-icons_link {
-  display: block;
-  $dimension: 70px;
-  width: $dimension;
-  height: $dimension;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include hide-text;
-  &[href^="http://www.facebook.com"] {
-    background-image: url('#{$IMG_DIR}/icons/facebook.svg');
+.icon-instagram {
+  &:hover {
+    fill: $icon-instagram;
   }
-  &[href^="http://www.twitter"] {
-    background-image: url('#{$IMG_DIR}/icons/twitter.svg');
+}
+.icon-facebook {
+  &:hover {
+    fill: $icon-facebook;
   }
-  &[href^="http://www.linkedin"] {
-    background-image: url('#{$IMG_DIR}/icons/linkedin.svg');
+}
+.icon-linkedin {
+  &:hover {
+    fill: $icon-linkedin;
   }
-  &[href^="http://www.tumblr.com"] {
-    background-image: url('#{$IMG_DIR}/icons/tumblr.svg');
+}
+.icon-twitter {
+  &:hover {
+    fill: $icon-twitter;
   }
-  &[href^="http://www.instagram.com"] {
-    background-image: url('#{$IMG_DIR}/icons/instagram.svg');
+}
+.icon-tumblr {
+  &:hover {
+    fill: $icon-tumblr;
   }
-  // @include mediaquery(desktop) {
-  //   border-radius: 100%;
-  //   border: 20px solid $pink;
-  //   &:hover {
-  //     background-color: $pink;
-  //     background-size: cover;
-  //     border-radius: 0;
-  //     border: 0;
-  //   }
-  //   &[href^="http://www.facebook"] {
-  //     background-color: $icon-facebook;
-  //     &:hover {
-  //       background-color: transparent;
-  //     }
-  //   }
-  //   &[href^="http://www.twitter"] {
-  //     background-color: $icon-twitter;
-  //     &:hover {
-  //       background-color: transparent;
-  //     }
-  //   }
-  //   &[href^="http://www.linkedin"] {
-  //     background-color: $icon-linkedin;
-  //     &:hover {
-  //       background-color: transparent;
-  //     }
-  //   }
-  //   &[href^="http://www.tumblr.com"] {
-  //     background-color: $icon-tumblr;
-  //     &:hover {
-  //       background-color: transparent;
-  //     }
-  //   }
-  //   &[href^="http://www.instagram.com"] {
-  //     background-color: $icon-instagram;
-  //     &:hover {
-  //       background-color: transparent;
-  //     }
-  //   }
-  // }
 }
