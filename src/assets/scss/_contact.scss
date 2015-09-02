@@ -55,22 +55,5 @@
   .contact-overlay {
     height: 100%;
     background: transparentize($blue, 0.2);
-    /*transform: translate3d(0,0,0);*/
   }
-  // .contact-overlay-esc {
-  //   span {
-  //     background-color: transparent;
-  //     box-shadow: none;
-  //   }
-  //   span:before, span:after {
-  //     top: 0;
-  //     background: white;
-  //   }
-  //   span:before {
-  //     top: ( $stroke * 2.8 );
-  //   }
-  //   span:after {
-  //     bottom: -( $stroke * 1.4 );
-  //   }
-  // }
 }
